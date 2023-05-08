@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-multi-carousel-list.carousel-testimonios {
+	position: relative;
+	.react-multi-carousel-track {
+		margin-bottom: 5rem;
+	}
+	.react-multi-carousel-dot-list {
+		.react-multi-carousel-dot button {
+			width: 1rem !important;
+			height: 1rem !important;
+			background-color: transparent !important;
+			border: solid 1px white !important;
+			opacity: 1 !important;
+			margin: 0 0.5rem;
+		}
+		.react-multi-carousel-dot--active button {
+			background-color: white !important;
+		}
+	}
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 60px 120px 60px;
+	border-color: transparent transparent #ffc809 transparent;
+
+	@media only screen and (min-width: 768px) {
+		border-width: 0 38px 76px 38px;
+	}
+}
+.carousel-phone {
+	height: 680px !important;
+	.react-multi-carousel-list {
+		@media only screen and (max-width: 640px) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 190px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+	}
+	@media only screen and (max-width: 640px) {
+		height: 420px !important;
+	}
+}
+.carousel-phone-black {
+	.react-multi-carousel-list {
+		@media only screen and (max-width: 640px) {
+		}
+	}
+}
+.react-multi-carousel-list {
+	.react-multi-carousel-dot-list {
+		bottom: 5px;
+		.react-multi-carousel-dot button {
+			background: #a2a2a2;
+			border-width: 0;
+		}
+		.react-multi-carousel-dot--active button {
+			background: #525252;
+			border-width: 0;
+			outline: none;
+		}
+	}
+}
+.PhoneInputInput {
+	background-color: #000;
+	outline: none;
+}
+.player-wrapper {
+	width: auto; // Reset width
+	height: calc(100vh - 80px); // Reset height
+	@media only screen and (max-width: 640px) {
+		height: 210px;
+	}
+}
+.react-player {
+	padding-top: 56.25%; // Percentage ratio for 16:9
+	position: relative; // Set to relative
+}
+.react-player > div {
+	position: absolute; // Scaling will occur since parent is relative now
+}
