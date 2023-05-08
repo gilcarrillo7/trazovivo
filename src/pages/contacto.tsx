@@ -229,7 +229,7 @@ const Contacto = () => {
 
 		axios({
 			method: "post",
-			url: "",
+			url: "https://getform.io/f/36ef0838-2036-4d87-acd3-6b41d6a3ffce",
 			data: new FormData(form),
 		})
 			.then((r) => {

@@ -57,7 +57,10 @@ const cisco = () => {
 						<Trans>cisco.t4</Trans>
 					</Paragraph>
 				</TextContainer>
-				<NextProject link="/projects/pacto-verde" className="text-white" />
+				<NextProject
+					link="/projects/friedrich-ebert-stiftung"
+					className="text-white"
+				/>
 				<AllProject link="/#projects" className="text-white" />
 			</div>
 			<Footer className={""} />

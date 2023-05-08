@@ -25,7 +25,7 @@ const projects = [
 		title: "Friedrich Ebert Stiftung",
 		text: "Estrategia de comunicación",
 		img: Project16,
-		link: "pacto-verde",
+		link: "friedrich-ebert-stiftung",
 	},
 	{
 		title: "Incuba",

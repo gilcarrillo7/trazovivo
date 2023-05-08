@@ -29,8 +29,8 @@ import ReactPlayer from "react-player";
 
 export const Head = () => (
 	<SEO
-		title="Trazo Vivo - pacto"
-		image="https://trazovivo.com/imgs/pacto.jpg"
+		title="Trazo Vivo - Friedrich Ebert Stiftung"
+		image="https://trazovivo.com/imgs/FES_Mexico.jpg"
 		url="/projects/pacto"
 	/>
 );
