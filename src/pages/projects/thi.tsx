@@ -104,7 +104,7 @@ const Thi = () => {
       </HeadTitle>
       <FullImage img={img2} alt="thi" />
       <BigText text="thi.t21" />
-      <div className="w-full my-16 flex flex-col sm:flex-row gap-8 sm:gap-4">
+      <div className="w-full my-16 flex flex-col sm:flex-row gap-8 sm:gap-4 z-30">
         <div className="sm:w-1/2 h-96 sm:h-[calc(100vh-8rem)] px-4 sm:px-0">
           <ReactPlayer
             width="100%"
@@ -143,9 +143,11 @@ const Thi = () => {
         leftimg={img8}
         rightimg={img9}
         className="my-6"
+        leftClass="scale-[0.85]"
+        rightClass="scale-[0.85]"
       />
       <FullImage img={img10} alt="thi" />
-      <NextProject link="/projects/incuba" />
+      <NextProject link="/projects/friedrich-ebert-stiftung" />
       <AllProject link="/#projects" />
       <Footer className={"bg-black text-white"} />
     </Layout>
