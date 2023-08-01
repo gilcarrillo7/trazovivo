@@ -31,7 +31,7 @@ export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Friedrich Ebert Stiftung"
 		image="https://trazovivo.com/imgs/FES_Mexico.jpg"
-		url="/projects/pacto"
+		url="/projects/friedrich-ebert-stiftung"
 	/>
 );
 

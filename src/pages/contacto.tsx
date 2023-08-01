@@ -220,7 +220,6 @@ const Contacto = () => {
 	const handleOnSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
 		const form = event.target as unknown as HTMLFormElement;
-		console.log(form);
 		setServerState({
 			submitting: true,
 			status: null,

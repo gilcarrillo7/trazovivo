@@ -21,13 +21,16 @@ import img7 from "../../images/irc/7.jpg";
 import img8 from "../../images/irc/8.jpg";
 import img9 from "../../images/irc/9.jpg";
 import img10 from "../../images/irc/10.jpg";
-import thumb from "../../images/irc/Thumb_Linkedin.jpg";
 import Footer from "../../components/layout/Footer";
 import Paragraph from "../../components/projects/Paragraph";
 import { SEO } from "../../components/layout/SEO";
 
 export const Head = () => (
-	<SEO image={thumb} title="IRC - International Rescue Committee" />
+	<SEO
+		title="IRC - International Rescue Committee"
+		image="https://trazovivo.com/imgs/irc.jpg"
+		url="/projects/international-rescue-committee"
+	/>
 );
 
 const irc = () => {

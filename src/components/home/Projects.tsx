@@ -17,10 +17,17 @@ import Project13 from "../../images/projects/13.jpg";
 import Project14 from "../../images/projects/14.jpg";
 import Project15 from "../../images/projects/15.jpg";
 import Project16 from "../../images/projects/16.jpg";
+import Project17 from "../../images/projects/17.jpg";
 import { Trans } from "react-i18next";
 import { useState } from "react";
 
 const projects = [
+	{
+		title: "thi.t1",
+		text: "thi.t2",
+		img: Project17,
+		link: "thi",
+	},
 	{
 		title: "Friedrich Ebert Stiftung",
 		text: "Estrategia de comunicación",
