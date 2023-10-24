@@ -58,7 +58,7 @@ const cisco = () => {
 					</Paragraph>
 				</TextContainer>
 				<NextProject
-					link="/projects/thi"
+					link="/projects/cfosc"
 					className="text-white"
 				/>
 				<AllProject link="/#projects" className="text-white" />

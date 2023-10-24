@@ -104,8 +104,8 @@ const Thi = () => {
       </HeadTitle>
       <FullImage img={img2} alt="thi" />
       <BigText text="thi.t21" />
-      <div className="w-full my-16 flex flex-col sm:flex-row gap-8 sm:gap-4 z-30">
-        <div className="sm:w-1/2 h-96 sm:h-[calc(100vh-8rem)] px-4 sm:px-0">
+      <div className="w-full my-16 flex flex-col sm:flex-row z-30">
+        <div className="sm:w-1/2 h-[30rem] sm:h-[calc(100vh-8rem)] px-4 sm:px-0 mb-8 sm:mb-8">
           <ReactPlayer
             width="100%"
             height="100%"
@@ -113,7 +113,7 @@ const Thi = () => {
             url={`https://vimeo.com/777338237`}
           ></ReactPlayer>
         </div>
-        <div className="sm:w-1/2 h-96 sm:h-[calc(100vh-8rem)] px-4 sm:px-0">
+        <div className="sm:w-1/2 h-[30rem] sm:h-[calc(100vh-8rem)] px-4 sm:px-0">
           <ReactPlayer
             width="100%"
             height="100%"

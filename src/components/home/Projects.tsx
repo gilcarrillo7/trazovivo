@@ -18,10 +18,17 @@ import Project14 from "../../images/projects/14.jpg";
 import Project15 from "../../images/projects/15.jpg";
 import Project16 from "../../images/projects/16.jpg";
 import Project17 from "../../images/projects/17.jpg";
+import Project18 from "../../images/projects/18.gif";
 import { Trans } from "react-i18next";
 import { useState } from "react";
 
 const projects = [
+	{
+		title: "cfosc.t0",
+		text: "thi.t2",
+		img: Project18,
+		link: "cfosc",
+	},
 	{
 		title: "thi.t1",
 		text: "thi.t2",

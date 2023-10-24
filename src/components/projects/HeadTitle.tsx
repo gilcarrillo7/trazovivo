@@ -4,7 +4,7 @@ import TextContainer from "./TextContainer";
 
 const HeadTitle = (props: {
 	children: React.ReactNode;
-	title: string;
+	title?: string;
 	className?: string;
 }) => {
 	const { title, className } = props;
