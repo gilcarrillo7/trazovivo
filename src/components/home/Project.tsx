@@ -12,7 +12,7 @@ interface IProps {
 }
 
 const Project = ({ img, title, text, link, className }: IProps) => {
-	const { ref, inView } = useInView({ threshold: 0.3 });
+	const { ref, inView } = useInView({ threshold: 0.5 });
 	return (
 		<Link to={`/projects/${link}`}>
 			<div

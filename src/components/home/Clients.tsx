@@ -14,14 +14,17 @@ import Client11 from "../../images/clients/11.svg";
 import Client12 from "../../images/clients/12.svg";
 import Client13 from "../../images/clients/13.svg";
 import Client14 from "../../images/clients/14.svg";
+import CFOSC from "../../images/clients/CFOSC.svg";
+import FECHAC from "../../images/clients/FECHAC.svg";
+import GIZ from "../../images/clients/GIZ.svg";
 import { useInView } from "react-intersection-observer";
 
 const Clients = () => {
-	const { ref: ref1, inView: view1 } = useInView({ threshold: 0.3 });
-	const { ref: ref2, inView: view2 } = useInView({ threshold: 0.3 });
-	const { ref: ref3, inView: view3 } = useInView({ threshold: 0.3 });
-	const { ref: ref4, inView: view4 } = useInView({ threshold: 0.3 });
-	const { ref: ref5, inView: view5 } = useInView({ threshold: 0.3 });
+	const { ref: ref1, inView: view1 } = useInView({ threshold: 0.5 });
+	const { ref: ref2, inView: view2 } = useInView({ threshold: 0.5 });
+	const { ref: ref3, inView: view3 } = useInView({ threshold: 0.5 });
+	const { ref: ref4, inView: view4 } = useInView({ threshold: 0.5 });
+	const { ref: ref5, inView: view5 } = useInView({ threshold: 0.5 });
 	return (
 		<div className="container">
 			<div
@@ -32,9 +35,9 @@ const Clients = () => {
 			>
 				<img src={Client1} alt="IRC" className="mb-4 mx-auto w-20" />
 				<img src={Client2} alt="" className="mb-4 mx-auto w-32" />
-				<img src={Client3} alt="" className="mb-4 mx-auto w-32" />
-				<img src={Client4} alt="" className="mb-4 mx-auto w-36" />
-				<img src={Client5} alt="" className="hidden sm:flex mb-4 mx-auto w-24" />
+				<img src={GIZ} alt="" className="mb-4 mx-auto w-56" />
+				<img src={CFOSC} alt="" className="mb-4 mx-auto w-20" />
+				<img src={FECHAC} alt="" className="hidden sm:flex mb-4 mx-auto w-24" />
 			</div>
 			<div
 				ref={ref2}
@@ -42,7 +45,7 @@ const Clients = () => {
 					view2 ? "opacity-100" : "opacity-0"
 				}`}
 			>
-				<img src={Client5} alt="" className="mb-4 mx-auto w-24" />
+				<img src={FECHAC} alt="" className="mb-4 mx-auto w-24" />
 				<img src={Client6} alt="" className="mb-4 mx-auto w-56" />
 			</div>
 			<div
@@ -53,7 +56,7 @@ const Clients = () => {
 			>
 				<img src={Client6} alt="" className="hidden sm:flex mb-4 mx-auto w-56" />
 				<img src={Client7} alt="" className="mb-4 mx-auto w-40" />
-				<img src={Client8} alt="" className="mb-4 mx-auto w-40" />
+				<img src={Client5} alt="" className="mb-4 mx-auto w-24" />
 				<img src={Client9} alt="" className="hidden sm:flex mb-4 mx-auto w-44" />
 			</div>
 			<div
@@ -63,7 +66,7 @@ const Clients = () => {
 				}`}
 			>
 				<img src={Client9} alt="" className="mb-4 mx-auto w-44" />
-				<img src={Client10} alt="" className="mb-4 mx-auto w-44" />
+				<img src={Client4} alt="" className="mb-4 mx-auto w-44" />
 			</div>
 			<div
 				ref={ref5}
@@ -71,10 +74,10 @@ const Clients = () => {
 					view5 ? "opacity-100" : "opacity-0"
 				}`}
 			>
-				<img src={Client10} alt="" className="hidden sm:flex mb-4 mx-auto w-44" />
+				<img src={Client4} alt="" className="hidden sm:flex mb-4 mx-auto w-44" />
 				<img src={Client11} alt="" className="mb-4 mx-auto w-36" />
 				<img src={Client12} alt="" className="mb-4 mx-auto w-36" />
-				<img src={Client13} alt="" className="mb-4 mx-auto w-44" />
+				<img src={Client3} alt="" className="mb-4 mx-auto w-44" />
 				<img src={Client14} alt="" className="mb-4 mx-auto w-32" />
 			</div>
 		</div>

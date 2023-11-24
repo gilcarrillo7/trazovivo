@@ -32,7 +32,7 @@ interface IProps {
 }
 
 const Personal = () => {
-	const { ref, inView } = useInView({ threshold: 0.3 });
+	const { ref, inView } = useInView({ threshold: 0.5 });
 	return (
 		<Link to="/personal">
 			<div
@@ -55,7 +55,7 @@ const Personal = () => {
 	);
 };
 const Proyectos = () => {
-	const { ref, inView } = useInView({ threshold: 0.3 });
+	const { ref, inView } = useInView({ threshold: 0.5 });
 	return (
 		<Link to="/#projects">
 			<div
@@ -78,7 +78,7 @@ const Proyectos = () => {
 	);
 };
 const Valores = () => {
-	const { ref, inView } = useInView({ threshold: 0.3 });
+	const { ref, inView } = useInView({ threshold: 0.5 });
 	return (
 		<Link to="/valores">
 			<div

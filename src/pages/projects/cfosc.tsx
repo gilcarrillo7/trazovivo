@@ -153,7 +153,7 @@ const Thi = () => {
       <FullImage img={img12} alt="thi" />
       <TwoImagesSpace space="sm" alt="thi" leftimg={img13} rightimg={img14} />
       <FullImage img={img15} alt="thi" />
-      <NextProject link="/projects/thi" />
+      <NextProject link="/projects/international-rescue-committee" />
       <AllProject link="/#projects" />
       <Footer className={"bg-black text-white"} />
     </Layout>

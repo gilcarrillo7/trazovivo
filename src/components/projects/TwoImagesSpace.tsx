@@ -20,8 +20,8 @@ const TwoImagesSpace = ({
   nores?: boolean;
   className?: string;
 }) => {
-  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.3 });
-  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.3 });
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.5 });
+  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.5 });
   const size = space === "lg" ? "1/3" : space === "md" ? "5/12" : "1/2";
   const between =
     space === "lg" ? "w-1/3" : space === "md" ? "w-2/12" : "hidden";

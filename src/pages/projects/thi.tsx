@@ -147,7 +147,7 @@ const Thi = () => {
         rightClass="scale-[0.85]"
       />
       <FullImage img={img10} alt="thi" />
-      <NextProject link="/projects/friedrich-ebert-stiftung" />
+      <NextProject link="/projects/incuba" />
       <AllProject link="/#projects" />
       <Footer className={"bg-black text-white"} />
     </Layout>

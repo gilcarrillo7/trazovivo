@@ -58,7 +58,7 @@ const Valor = ({
 	text: string;
 	link: string;
 }) => {
-	const { ref, inView } = useInView({ threshold: 0.3 });
+	const { ref, inView } = useInView({ threshold: 0.5 });
 	return (
 		<Link to={link}>
 			<div
@@ -80,7 +80,7 @@ const Valor = ({
 };
 
 const Valores = () => {
-	const { ref: ref1, inView: view1 } = useInView({ threshold: 0.3 });
+	const { ref: ref1, inView: view1 } = useInView({ threshold: 0.5 });
 	return (
 		<Layout color="black">
 			<InnerBigContainer>

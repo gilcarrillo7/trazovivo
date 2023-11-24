@@ -103,7 +103,7 @@ const pacto = () => {
 			<FullImage img={img9} alt="pacto" />
 			<FullImage img={img10} alt="pacto" />
 			<FullImage img={img11} alt="pacto" />
-			<NextProject link="/projects/incuba" />
+			<NextProject link="/projects/thi" />
 			<AllProject link="/#projects" />
 			<Footer className={"bg-black text-white"} />
 		</Layout>

@@ -24,11 +24,11 @@ import { SEO } from "../components/layout/SEO";
 
 const IndexPage = (props: PageProps) => {
 	const { menuOpen, setHoverReel } = useContext(AppContext);
-	const { ref: refFirst, inView: viewFirst } = useInView({ threshold: 0.3 });
-	const { ref: refSecond, inView: viewSecond } = useInView({ threshold: 0.3 });
-	const { ref: refThird, inView: viewThird } = useInView({ threshold: 0.3 });
-	const { ref: refFourth, inView: viewFourth } = useInView({ threshold: 0.3 });
-	const { ref: refFifth, inView: viewFifth } = useInView({ threshold: 0.3 });
+	const { ref: refFirst, inView: viewFirst } = useInView({ threshold: 0.5 });
+	const { ref: refSecond, inView: viewSecond } = useInView({ threshold: 0.5 });
+	const { ref: refThird, inView: viewThird } = useInView({ threshold: 0.5 });
+	const { ref: refFourth, inView: viewFourth } = useInView({ threshold: 0.5 });
+	const { ref: refFifth, inView: viewFifth } = useInView({ threshold: 0.5 });
 
 	const [openMenu, setOpenMenu] = useState(false);
 	const [scrollPosition, setScrollPosition] = useState(false);

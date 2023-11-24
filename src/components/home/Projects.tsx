@@ -13,7 +13,7 @@ import Project9 from "../../images/projects/9.jpg";
 import Project10 from "../../images/projects/10.jpg";
 import Project11 from "../../images/projects/11.jpg";
 import Project12 from "../../images/projects/12.jpg";
-import Project13 from "../../images/projects/13.jpg";
+import Project13 from "../../images/projects/13.gif";
 import Project14 from "../../images/projects/14.jpg";
 import Project15 from "../../images/projects/15.jpg";
 import Project16 from "../../images/projects/16.jpg";
@@ -30,16 +30,22 @@ const projects = [
 		link: "cfosc",
 	},
 	{
-		title: "thi.t1",
-		text: "thi.t2",
-		img: Project17,
-		link: "thi",
+		title: "IRC - International Rescue Committee",
+		text: "Branding",
+		img: Project13,
+		link: "international-rescue-committee",
 	},
 	{
 		title: "Friedrich Ebert Stiftung",
 		text: "Estrategia de comunicación",
 		img: Project16,
 		link: "friedrich-ebert-stiftung",
+	},
+	{
+		title: "thi.t1",
+		text: "thi.t2",
+		img: Project17,
+		link: "thi",
 	},
 	{
 		title: "Incuba",
@@ -52,12 +58,6 @@ const projects = [
 		text: "Nombre, Branding, Web",
 		img: Project14,
 		link: "ikaro",
-	},
-	{
-		title: "IRC - International Rescue Committee",
-		text: "Branding",
-		img: Project13,
-		link: "international-rescue-committee",
 	},
 	{
 		title: "FZM - Feministisches Zentrum",

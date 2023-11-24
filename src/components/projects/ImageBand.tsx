@@ -11,7 +11,7 @@ const ImageBand = ({
 	alt: string;
 	text: string;
 }) => {
-	const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.3 });
+	const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.5 });
 	return (
 		<div className="relative">
 			<div
