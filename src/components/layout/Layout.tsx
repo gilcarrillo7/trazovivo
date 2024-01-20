@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Header from "./Header";
 
 interface IProps {
-	children: boolean | React.ReactFragment | React.ReactPortal | React.ReactNode;
+	children: React.ReactNode;
 	color: string;
 	classNameHeader?: string;
 	justLogo?: boolean;

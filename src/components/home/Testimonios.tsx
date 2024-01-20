@@ -100,6 +100,22 @@ const Testimonios = () => {
 						</p>
 					</div>
 				</div>
+				<div className="w-full text-left xl:pr-48 sm:pr-28">
+					<p className="text-3xl sm:text-4xl !font-light mb-16">
+						<Trans>testimonio5.1</Trans>
+					</p>
+					<div className="font-normal text-lg sm:text-xl">
+						<p>
+							<Trans>testimonio5.2</Trans>
+						</p>
+						<p>
+							<Trans>testimonio5.3</Trans>
+						</p>
+						<p>
+							<Trans>testimonio5.4</Trans>
+						</p>
+					</div>
+				</div>
 			</Carousel>
 		</div>
 	);

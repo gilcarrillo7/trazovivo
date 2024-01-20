@@ -35,14 +35,14 @@ export const Head = () => (
   <SEO
     title="Trazo Vivo - Centro para el fortalecimiento de la sociedad civil"
     image="https://trazovivo.com/imgs/cfosc.jpg"
-    url="/projects/thi"
+    url="/projects/cfosc"
   />
 );
 
-const Thi = () => {
+const Cfosc = () => {
   return (
     <Layout color="black">
-      <FullImage img={img1} alt="thi" />
+      <FullImage img={img1} alt="cfosc" />
       <HeadTitle>
         <Paragraph className="text-xl sm:text-2xl mb-6">
           <span className="font-bold">
@@ -107,7 +107,7 @@ const Thi = () => {
           </ul>
         </Paragraph>
       </HeadTitle>
-      <FullImage img={img2} alt="thi" />
+      <FullImage img={img2} alt="cfosc" />
       <BigText text="cfosc.t17" />
       <div className="w-full my-16 flex flex-col sm:flex-row z-30 sm:gap-36">
         <div className="sm:w-1/2 mb-8 sm:mb-0">
@@ -122,7 +122,7 @@ const Thi = () => {
           ></ReactPlayer>
         </div>
       </div>
-      <FullImage img={img4} alt="thi" />
+      <FullImage img={img4} alt="cfosc" />
       <BigText text="cfosc.t18" />
       <div className="w-full my-16 flex flex-col sm:flex-row z-30 sm:gap-36">
         <div className="sm:w-1/2 mb-8 sm:mb-0">
@@ -137,30 +137,30 @@ const Thi = () => {
           ></ReactPlayer>
         </div>
       </div>
-      <FullImage img={img6} alt="thi" />
+      <FullImage img={img6} alt="cfosc" />
       <TwoImagesSpace
         space="lg"
-        alt="thi"
+        alt="cfosc"
         leftimg={img7}
         rightimg={img8}
         className="my-6"
         leftClass="scale-[0.85]"
         rightClass="scale-[0.85]"
       />
-      <FullImage img={img9} alt="thi" />
+      <FullImage img={img9} alt="cfosc" />
       <BigText text="cfosc.t19" className="mt-8" />
-      <TwoImagesSpace space="sm" alt="thi" leftimg={img10} rightimg={img11} />
-      <FullImage img={img12} alt="thi" />
-      <TwoImagesSpace space="sm" alt="thi" leftimg={img13} rightimg={img14} />
-      <FullImage img={img15} alt="thi" />
-      <NextProject link="/projects/international-rescue-committee" />
+      <TwoImagesSpace space="sm" alt="cfosc" leftimg={img10} rightimg={img11} />
+      <FullImage img={img12} alt="cfosc" />
+      <TwoImagesSpace space="sm" alt="cfosc" leftimg={img13} rightimg={img14} />
+      <FullImage img={img15} alt="cfosc" />
+      <NextProject link="/projects/alianza-acercate" />
       <AllProject link="/#projects" />
       <Footer className={"bg-black text-white"} />
     </Layout>
   );
 };
 
-export default Thi;
+export default Cfosc;
 
 export const query = graphql`
   query ($language: String!) {

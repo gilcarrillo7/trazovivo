@@ -8,7 +8,6 @@ import Img1 from "../images/personal/1.jpg";
 import Img2 from "../images/personal/2.jpg";
 import Img3 from "../images/personal/3.jpg";
 import Img5 from "../images/personal/5.jpg";
-import Img6 from "../images/personal/6.png";
 import Img7 from "../images/personal/7.png";
 import Footer from "../components/layout/Footer";
 import { useInView } from "react-intersection-observer";
@@ -55,11 +54,6 @@ const Personal = () => {
       img: Img2,
       title: "Jonathan Saenz",
       text: "jon",
-    },
-    {
-      img: Img6,
-      title: "Sophie Delvincourt",
-      text: "sofie",
     },
     {
       img: Img3,

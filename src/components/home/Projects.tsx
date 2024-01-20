@@ -19,6 +19,7 @@ import Project15 from "../../images/projects/15.jpg";
 import Project16 from "../../images/projects/16.jpg";
 import Project17 from "../../images/projects/17.jpg";
 import Project18 from "../../images/projects/18.gif";
+import Project19 from "../../images/projects/19.gif";
 import { Trans } from "react-i18next";
 import { useState } from "react";
 
@@ -28,6 +29,12 @@ const projects = [
 		text: "thi.t2",
 		img: Project18,
 		link: "cfosc",
+	},
+	{
+		title: "al.t0",
+		text: "Branding",
+		img: Project19,
+		link: "alianza-acercate",
 	},
 	{
 		title: "IRC - International Rescue Committee",
@@ -101,30 +108,6 @@ const projects = [
 		text: "Brochure de comunicación de la compañía",
 		img: Project5,
 		link: "coconat",
-	},
-	{
-		title: "Fortinet",
-		text: "Identidad gráfica y materiales de comunicación",
-		img: Project4,
-		link: "fortinet",
-	},
-	{
-		title: "Cisco",
-		text: "Comics como complemento de campaña creativa",
-		img: Project3,
-		link: "cisco-comics",
-	},
-	{
-		title: "Oracle",
-		text: "Concepto creativo, identidad gráfica y materiales de comunicación",
-		img: Project2,
-		link: "oracle",
-	},
-	{
-		title: "Cisco",
-		text: "Diseño de materiales de comunicación para Cisco Live 2013 Cancún",
-		img: Project1,
-		link: "cisco-live",
 	},
 ];
 

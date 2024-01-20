@@ -26,34 +26,43 @@ const Menu = () => {
 								<Link
 									to="/"
 									onClick={() => setMenuOpen(false)}
-									className="hover:font-medium"
+									className="font-thin hover:font-normal"
 								>
 									<Trans>Inicio</Trans>
 								</Link>
 							</li>
 							<li className="border-b boder-white py-2 mb-2 sm:mb-4">
 								<Link
-									to="/valores"
+									to="/quienes_somos"
 									onClick={() => setMenuOpen(false)}
-									className="hover:font-medium"
+									className="font-thin hover:font-normal"
 								>
-									<Trans>Valores</Trans>
+									<Trans>Quienes somos</Trans>
 								</Link>
 							</li>
 							<li className="border-b boder-white py-2 mb-2 sm:mb-4">
 								<Link
 									to="/#projects"
 									onClick={() => setMenuOpen(false)}
-									className="hover:font-medium"
+									className="font-thin hover:font-normal"
 								>
 									<Trans>Proyectos</Trans>
 								</Link>
 							</li>
 							<li className="border-b boder-white py-2 mb-2 sm:mb-4">
 								<Link
+									to="/valores"
+									onClick={() => setMenuOpen(false)}
+									className="font-thin hover:font-normal"
+								>
+									<Trans>Valores</Trans>
+								</Link>
+							</li>
+							<li className="border-b boder-white py-2 mb-2 sm:mb-4">
+								<Link
 									to="/personal"
 									onClick={() => setMenuOpen(false)}
-									className="hover:font-medium"
+									className="font-thin hover:font-normal"
 								>
 									<Trans>Personal</Trans>
 								</Link>
