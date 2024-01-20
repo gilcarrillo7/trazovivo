@@ -55,7 +55,7 @@ const QueHacemos = () => {
           </div>
           <div
             ref={ref}
-            className="pt-24 sm:py-0 sm:w-1/3 flex justify-center items-center gap-8"
+            className="pt-24 sm:py-0 sm:w-1/3 flex flex-wrap justify-center items-center gap-8"
           >
             <div
               className={`bg-tvyellow w-[60px] h-[60px] rounded-full hover:bg-tvpurple transition-opacity duration-1000 ease-in-out ${

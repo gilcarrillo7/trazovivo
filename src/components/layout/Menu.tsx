@@ -71,7 +71,7 @@ const Menu = () => {
 								<Link
 									to="/contacto"
 									onClick={() => setMenuOpen(false)}
-									className="hover:font-medium"
+									className="font-thin hover:font-normal"
 								>
 									<Trans>Contacto</Trans>
 								</Link>

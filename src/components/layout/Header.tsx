@@ -8,6 +8,7 @@ import Menu from "./Menu";
 import { AppContext } from "../../context/AppContext";
 import { useContext } from "react";
 import Logo10 from "../../images/logo10.svg";
+import { navigate } from "gatsby";
 
 interface IProps {
   color?: string;
@@ -20,7 +21,7 @@ const Header = ({
   className = "",
   justLogo = false,
 }: IProps) => {
-  const { menuOpen } = useContext(AppContext);
+  const { menuOpen, setMenuOpen } = useContext(AppContext);
   const { language, changeLanguage } = useI18next();
   const currentColor = menuOpen ? "white" : color;
 
@@ -41,10 +42,20 @@ const Header = ({
             className={`container relative py-4 z-30 font-light text-xl flex text-${currentColor}`}
           >
             <div className="sm:w-1/2 flex gap-2 sm:gap-4">
-              <Link className="inline-flex" to="/">
+              <button
+                className="inline-flex"
+                onClick={() => {
+                  navigate("/");
+                  setMenuOpen(false);
+                }}
+              >
                 <Logo color={currentColor} />
-              </Link>
-              <img src={Logo10} alt="10 años" className="w-[100px] lg:w-[135px]" />
+              </button>
+              <img
+                src={Logo10}
+                alt="10 años"
+                className="w-[100px] lg:w-[135px]"
+              />
             </div>
             <div
               className={`sm:w-1/2 flex items-center justify-end ${
