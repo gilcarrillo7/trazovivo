@@ -20,10 +20,17 @@ import Project16 from "../../images/projects/16.jpg";
 import Project17 from "../../images/projects/17.jpg";
 import Project18 from "../../images/projects/18.gif";
 import Project19 from "../../images/projects/19.gif";
+import Project20 from "../../images/projects/20.gif";
 import { Trans } from "react-i18next";
 import { useState } from "react";
 
 const projects = [
+	{
+		title: "incl.t0",
+		text: "thi.t2",
+		img: Project20,
+		link: "iniciativa-x-la-inclusion",
+	},
 	{
 		title: "cfosc.t0",
 		text: "thi.t2",

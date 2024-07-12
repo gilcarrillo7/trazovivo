@@ -6,7 +6,7 @@ const TextContainer = (props: {
 	className?: string;
 }) => {
 	const { className } = props;
-	const { ref, inView } = useInView({ threshold: 0.5 });
+	const { ref, inView } = useInView({ threshold: 0.2 });
 	return (
 		<div
 			ref={ref}

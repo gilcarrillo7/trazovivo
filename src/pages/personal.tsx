@@ -6,9 +6,9 @@ import Layout from "../components/layout/Layout";
 import TrazoVivo from "../images/personal/TRAZOVIVO.png";
 import Img1 from "../images/personal/1.jpg";
 import Img2 from "../images/personal/2.jpg";
-import Img3 from "../images/personal/3.jpg";
-import Img5 from "../images/personal/5.jpg";
-import Img7 from "../images/personal/7.png";
+import Img5 from "../images/personal/3.jpg";
+import Img3 from "../images/personal/3.png";
+import Img4 from "../images/personal/7.png";
 import Footer from "../components/layout/Footer";
 import { useInView } from "react-intersection-observer";
 import Button from "../components/shared/Button";
@@ -57,18 +57,18 @@ const Personal = () => {
     },
     {
       img: Img3,
-      title: "Gilberto Carrillo",
-      text: "gil",
+      title: "Verónica Barrientos",
+      text: "vero",
     },
     {
-      img: Img7,
+      img: Img4,
       title: "Hannia Ramírez",
       text: "hania",
     },
     {
       img: Img5,
-      title: "Miguel Ángel García",
-      text: "miguel",
+      title: "Gilberto Carrillo",
+      text: "gil",
     },
   ];
   return (
