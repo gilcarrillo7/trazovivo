@@ -51,7 +51,7 @@ export default Juego;
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Valores - Juego"
-		image="https://trazovivo.com/imgs/valor1.gif"
+		image="https://trazovivo.com/mailing/valor1.gif"
 		description="El juego abre un espacio sin necesidad ni preocupaciones, no está sometido a un objetivo ni a una utilidad."
 		url="/valores/juego"
 	/>

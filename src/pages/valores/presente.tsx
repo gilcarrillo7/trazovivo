@@ -54,7 +54,7 @@ export default Presente;
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Valores - Presente"
-		image="https://trazovivo.com/imgs/valor3.gif"
+		image="https://trazovivo.com/mailing/valor3.gif"
 		description="Sólo hay una cosa que realmente habitamos y que tiene todo el potencial imaginable: el momento presente."
 		url="/valores/presente"
 	/>

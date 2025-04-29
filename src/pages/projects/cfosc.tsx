@@ -34,7 +34,7 @@ import ReactPlayer from "react-player";
 export const Head = () => (
   <SEO
     title="Trazo Vivo - Centro para el fortalecimiento de la sociedad civil"
-    image="https://trazovivo.com/imgs/cfosc.jpg"
+    image="https://trazovivo.com/mailing/cfosc.jpg"
     url="/projects/cfosc"
   />
 );

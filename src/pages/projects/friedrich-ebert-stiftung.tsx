@@ -30,7 +30,7 @@ import ReactPlayer from "react-player";
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Friedrich Ebert Stiftung"
-		image="https://trazovivo.com/imgs/FES_Mexico.jpg"
+		image="https://trazovivo.com/mailing/FES_Mexico.jpg"
 		url="/projects/friedrich-ebert-stiftung"
 	/>
 );

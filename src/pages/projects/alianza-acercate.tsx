@@ -28,7 +28,7 @@ import { SEO } from "../../components/layout/SEO";
 export const Head = () => (
   <SEO
     title="Alianza Acércate"
-    image="https://trazovivo.com/imgs/alianza_acercate.gif"
+    image="https://trazovivo.com/mailing/alianza_acercate.gif"
     url="/projects/international-rescue-committee"
   />
 );

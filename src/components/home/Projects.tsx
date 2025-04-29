@@ -22,10 +22,17 @@ import Project18 from "../../images/projects/18.gif";
 import Project19 from "../../images/projects/19.gif";
 import Project20 from "../../images/projects/20.gif";
 import Project21 from "../../images/projects/21.gif";
+import Project22 from "../../images/projects/22.gif";
 import { Trans } from "react-i18next";
 import { useState } from "react";
 
 const projects = [
+	{
+		title: "Wingu",
+		text: "wingu.t0",
+		img: Project22,
+		link: "wingu",
+	},
 	{
 		title: "Oxfam",
 		text: "oxfam.t0",

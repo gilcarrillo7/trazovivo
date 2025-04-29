@@ -29,7 +29,7 @@ import { SEO } from "../../components/layout/SEO";
 export const Head = () => (
   <SEO
     title="IRC - International Rescue Committee"
-    image="https://trazovivo.com/imgs/irc.jpg"
+    image="https://trazovivo.com/mailing/irc.jpg"
     url="/projects/international-rescue-committee"
   />
 );

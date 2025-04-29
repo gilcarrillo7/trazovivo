@@ -10,7 +10,7 @@ interface IProps {
 export const SEO = ({
 	title = "Trazo Vivo",
 	description = "Potenciamos organizaciones comprometidas con el impacto social. Comunicar es algo más que solamente hablar. La comunicación significativa involucra varias acciones a la vez, como saber escuchar, mostrar empatía y sobre todo, cercanía y comprensión.",
-	image = "https://trazovivo.com/imgs/THUMB_REDES.jpg",
+	image = "https://trazovivo.com/mailing/THUMB_REDES.jpg",
 	url = "",
 }: IProps) => {
 	return (

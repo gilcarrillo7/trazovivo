@@ -52,7 +52,7 @@ export default Interdependencia;
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Valores - Interdependencia"
-		image="https://trazovivo.com/imgs/valor4.gif"
+		image="https://trazovivo.com/mailing/valor4.gif"
 		description="Ser conscientes de nuestra dependencia de otras formas de vida, nos arraiga al mundo. El mundo es una relación."
 		url="/valores/interdependencia"
 	/>

@@ -27,9 +27,9 @@ import ReactPlayer from "react-player";
 
 export const Head = () => (
   <SEO
-    title="Trazo Vivo - Iniciativa x la Inclusión"
-    image="https://trazovivo.com/imgs/inclusion.gif"
-    url="/projects/iniciativa-x-la-inclusion"
+    title="Trazo Vivo - Oxfam Centroamérica"
+    image="https://trazovivo.com/mailing/oxfam.gif"
+    url="/projects/oxfam"
   />
 );
 

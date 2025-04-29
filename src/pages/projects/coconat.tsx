@@ -42,7 +42,7 @@ const coconat = () => {
 					<Trans>coco.t3</Trans>
 				</Paragraph>
 			</TextContainer>
-			<NextProject link="/projects/oxfam" />
+			<NextProject link="/projects/wingu" />
 			<AllProject link="/#projects" />
 			<Footer className={"bg-black text-white"} />
 		</Layout>

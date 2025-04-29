@@ -56,7 +56,7 @@ export default Pausa;
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Valores - Pausa"
-		image={"https://trazovivo.com/imgs/valor5.gif"}
+		image={"https://trazovivo.com/mailing/valor5.gif"}
 		description="Sólo cuando una persona se detiene a contemplar, las cosas revelan su belleza, su verdadera esencia."
 		url="/valores/pausa"
 	/>

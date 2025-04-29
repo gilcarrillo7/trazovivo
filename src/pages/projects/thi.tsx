@@ -29,7 +29,7 @@ import ReactPlayer from "react-player";
 export const Head = () => (
   <SEO
     title="Trazo Vivo - Tu Historia Importa"
-    image="https://trazovivo.com/imgs/thi.jpg"
+    image="https://trazovivo.com/mailing/thi.jpg"
     url="/projects/thi"
   />
 );

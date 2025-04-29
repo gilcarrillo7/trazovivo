@@ -54,7 +54,7 @@ export default Liderazgo;
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Valores - Liderazgo"
-		image="https://trazovivo.com/imgs/valor2.gif"
+		image="https://trazovivo.com/mailing/valor2.gif"
 		description="El liderazgo es aprender a contrarrestar el poder, en vez de querer ejercerlo con toda su fuerza sobre otras personas."
 		url="/valores/liderazgo"
 	/>

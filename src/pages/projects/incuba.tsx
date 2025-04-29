@@ -34,7 +34,7 @@ import TwoImagesSpaceAni from "../../components/projects/TwoImagesSpaceAni";
 export const Head = () => (
 	<SEO
 		title="Trazo Vivo - Incuba"
-		image="https://trazovivo.com/imgs/Incuba.jpg"
+		image="https://trazovivo.com/mailing/Incuba.jpg"
 		url="/projects/incuba"
 	/>
 );
