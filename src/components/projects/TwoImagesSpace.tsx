@@ -20,8 +20,8 @@ const TwoImagesSpace = ({
   nores?: boolean;
   className?: string;
 }) => {
-  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.5 });
-  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.5 });
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.25, triggerOnce: true });
+  const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.25, triggerOnce: true });
   const size = space === "lg" ? "1/3" : space === "md" ? "5/12" : "1/2";
   const between =
     space === "lg" ? "w-1/3" : space === "md" ? "w-2/12" : "hidden";
@@ -33,7 +33,7 @@ const TwoImagesSpace = ({
         } sm:flex-row sm:gap-6`}
       >
         <div
-          className={`w-full ${
+          className={`w-full flex items-center ${
             nores ? "w-2/5 sm:w-1/3" : `sm:w-${size} px-8`
           } grow-0 mb-8 sm:mb-0 sm:px-0`}
         >
@@ -48,7 +48,7 @@ const TwoImagesSpace = ({
         </div>
         <div className={`shrink-0 ${nores ? "w-1/5 sm:w-1/3" : between}`}></div>
         <div
-          className={`w-full grow-0 ${
+          className={`w-full flex items-center grow-0 ${
             nores ? "w-2/5 sm:w-1/3" : `sm:w-${size} px-8`
           } sm:px-0`}
         >

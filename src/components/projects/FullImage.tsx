@@ -10,7 +10,7 @@ const FullImage = ({
 	alt: string;
 	mb?: boolean;
 }) => {
-	const { ref, inView } = useInView({ threshold: 0.5 });
+	const { ref, inView } = useInView({ threshold: 0.25 });
 	return (
 		<img
 			ref={ref}

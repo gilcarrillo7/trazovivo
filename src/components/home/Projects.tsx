@@ -1,10 +1,6 @@
 import * as React from "react";
 import Project from "./Project";
 
-import Project1 from "../../images/projects/1.jpg";
-import Project2 from "../../images/projects/2.jpg";
-import Project3 from "../../images/projects/3.jpg";
-import Project4 from "../../images/projects/4.jpg";
 import Project5 from "../../images/projects/5.jpg";
 import Project6 from "../../images/projects/6.jpg";
 import Project7 from "../../images/projects/7.jpg";
@@ -23,10 +19,24 @@ import Project19 from "../../images/projects/19.gif";
 import Project20 from "../../images/projects/20.gif";
 import Project21 from "../../images/projects/21.gif";
 import Project22 from "../../images/projects/22.gif";
+import Project23 from "../../images/projects/23.gif";
+import Project24 from "../../images/projects/24.gif";
 import { Trans } from "react-i18next";
 import { useState } from "react";
 
 const projects = [
+	{
+		title: "CARE Conecta",
+		text: "wingu.t0",
+		img: Project24,
+		link: "care-conecta",
+	},
+	{
+		title: "devlyn.t0",
+		text: "devlyn.t1",
+		img: Project23,
+		link: "fundacion-devlyn",
+	},
 	{
 		title: "Wingu",
 		text: "wingu.t0",
