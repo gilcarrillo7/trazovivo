@@ -27,7 +27,7 @@ import { useState } from "react";
 const projects = [
 	{
 		title: "CARE Conecta",
-		text: "wingu.t0",
+		text: "care.t0",
 		img: Project24,
 		link: "care-conecta",
 	},

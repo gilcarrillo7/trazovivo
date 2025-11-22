@@ -117,7 +117,7 @@ const CareConecta = () => {
         </Paragraph>
       </HeadTitle>
       <FullImage img={img2} alt="care-conecta" />
-      <TwoImagesSpace space="sm" alt="care-conecta" leftimg={img3} rightimg={img4} />
+      <TwoImagesSpace space="md" alt="care-conecta" leftimg={img3} rightimg={img4} />
       <FullImage img={img5} alt="care-conecta" />
       <div className="container w-full my-16 flex flex-col sm:flex-row z-30 sm:gap-36">
         <div className="sm:w-1/2 mb-8 sm:mb-0">
@@ -132,9 +132,9 @@ const CareConecta = () => {
           ></ReactPlayer>
         </div>
       </div>
-      <TwoImagesSpace space="sm" alt="care-conecta" leftimg={img7} rightimg={img8} />
-      <TwoImagesSpace space="sm" alt="care-conecta" leftimg={img9} rightimg={img10} />
-      <TwoImagesSpace space="sm" alt="care-conecta" leftimg={img11} rightimg={img12} />
+      <TwoImagesSpace space="md" alt="care-conecta" leftimg={img7} rightimg={img8} />
+      <TwoImagesSpace space="md" alt="care-conecta" leftimg={img9} rightimg={img10} />
+      <TwoImagesSpace space="md" alt="care-conecta" leftimg={img11} rightimg={img12} />
       <BigText text="care.t19" />
       <FullImage img={img13} alt="care-conecta" />
       <div className="w-full mb-8">
