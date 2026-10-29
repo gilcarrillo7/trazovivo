@@ -10,6 +10,6 @@ interface IProps {
 
 export const wrapRootElement = ({ element }: IProps) => (
 	<AppProvider>
-		<AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
+		<AnimatePresence mode="wait">{element}</AnimatePresence>
 	</AppProvider>
 );
