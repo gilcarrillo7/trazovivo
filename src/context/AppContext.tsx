@@ -2,11 +2,12 @@ import React, {
 	createContext,
 	Dispatch,
 	SetStateAction,
+	useMemo,
 	useState,
 } from "react";
 
 interface IProps {
-	children: boolean | React.ReactNode | React.ReactFragment | React.ReactPortal;
+	children: React.ReactNode;
 }
 
 interface IContext {
@@ -29,11 +30,12 @@ const AppProvider = (props: IProps) => {
 	const [menuOpen, setMenuOpen] = useState<boolean>(false);
 	const [hoverReel, setHoverReel] = useState<boolean>(false);
 
-	return (
-		<Provider value={{ menuOpen, setMenuOpen, hoverReel, setHoverReel }}>
-			{props.children}
-		</Provider>
+	const value = useMemo(
+		() => ({ menuOpen, setMenuOpen, hoverReel, setHoverReel }),
+		[menuOpen, hoverReel],
 	);
+
+	return <Provider value={value}>{props.children}</Provider>;
 };
 
 export { AppContext, AppProvider };

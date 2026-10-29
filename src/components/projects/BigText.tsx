@@ -11,11 +11,9 @@ const BigText = ({
 }) => {
 	return (
 		<TextContainer>
-			<p
-				className={`font-semibold text-xl sm:text-3xl ${className}`}
-			>
+			<h2 className={`font-semibold text-xl sm:text-3xl ${className}`}>
 				<Trans>{text}</Trans>
-			</p>
+			</h2>
 		</TextContainer>
 	);
 };

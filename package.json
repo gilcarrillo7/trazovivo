@@ -13,13 +13,13 @@
 		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"format": "prettier --write \"src/components/**/*.{ts,tsx}\" \"src/hooks/**/*.ts\" \"src/context/**/*.tsx\""
 	},
 	"dependencies": {
 		"@react-spring/types": "^9.5.5",
 		"framer-motion": "^7.5.2",
 		"gatsby": "^4.24.1",
-		"gatsby-plugin-google-analytics": "^4.24.0",
 		"gatsby-plugin-image": "^2.24.0",
 		"gatsby-plugin-manifest": "^4.24.0",
 		"gatsby-plugin-react-i18next": "^2.0.4",
@@ -35,7 +35,6 @@
 		"react-helmet": "^6.1.0",
 		"react-i18next": "^11.18.6",
 		"react-intersection-observer": "^9.4.0",
-		"react-loader-spinner": "^5.3.4",
 		"react-multi-carousel": "^2.8.2",
 		"react-phone-number-input": "^3.2.12",
 		"react-player": "^2.11.2",
@@ -51,6 +50,7 @@
 		"autoprefixer": "^10.4.12",
 		"gatsby-plugin-postcss": "^5.24.0",
 		"postcss": "^8.4.17",
+		"prettier": "^3.9.10",
 		"tailwindcss": "^3.1.8",
 		"typescript": "^4.8.3"
 	}

@@ -1,31 +1,20 @@
 import * as React from "react";
-import { ReactI18NextChild, Trans } from "react-i18next";
+import { Trans } from "gatsby-plugin-react-i18next";
 import Carousel from "react-multi-carousel";
+
+import { carouselResponsive } from "../shared/carouselConfig";
 
 import "react-multi-carousel/lib/styles.css";
 
-const Slide = (props: {
-	children: boolean | React.ReactFragment | React.ReactPortal | React.ReactNode;
-}) => (
+const responsive = carouselResponsive();
+
+const Slide = (props: { children: React.ReactNode }) => (
 	<div className="w-full text-center font-normal text-2xl sm:text-3xl lg:text-4xl">
 		{props.children}
 	</div>
 );
 
 const Frases = () => {
-	const responsive = {
-		desktop: {
-			breakpoint: { max: 3000, min: 576 },
-			items: 1,
-			slidesToSlide: 1, // optional, default to 1.
-		},
-		mobile: {
-			breakpoint: { max: 576, min: 0 },
-			items: 1,
-			slidesToSlide: 1, // optional, default to 1.
-		},
-	};
-
 	return (
 		<div className="w-full my-16">
 			<Carousel

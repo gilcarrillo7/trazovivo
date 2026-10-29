@@ -1,23 +1,14 @@
 import * as React from "react";
-import { Trans } from "react-i18next";
+import { Trans } from "gatsby-plugin-react-i18next";
 import Carousel from "react-multi-carousel";
+import { carouselResponsive } from "../shared/carouselConfig";
 
 import "react-multi-carousel/lib/styles.css";
 
-const Testimonios = () => {
-	const responsive = {
-		desktop: {
-			breakpoint: { max: 3000, min: 576 },
-			items: 1,
-			slidesToSlide: 1, // optional, default to 1.
-		},
-		mobile: {
-			breakpoint: { max: 576, min: 0 },
-			items: 1,
-			slidesToSlide: 1, // optional, default to 1.
-		},
-	};
+const responsive = carouselResponsive();
+const testimonios = [1, 2, 3, 4, 5];
 
+const Testimonios = () => {
 	return (
 		<div className="w-full">
 			<p className="text-xl sm:text-2xl font-light text-white mb-16">
@@ -36,86 +27,24 @@ const Testimonios = () => {
 				swipeable={true}
 				autoPlaySpeed={5000}
 			>
-				<div className="w-full text-left xl:pr-48 sm:pr-28">
-					<p className="text-3xl sm:text-4xl !font-light mb-16">
-						<Trans>testimonio1.1</Trans>
-					</p>
-					<div className="font-normal text-lg sm:text-xl">
-						<p>
-							<Trans>testimonio1.2</Trans>
+				{testimonios.map((n) => (
+					<div key={n} className="w-full text-left xl:pr-48 sm:pr-28">
+						<p className="text-3xl sm:text-4xl !font-light mb-16">
+							<Trans>{`testimonio${n}.1`}</Trans>
 						</p>
-						<p>
-							<Trans>testimonio1.3</Trans>
-						</p>
-						<p>
-							<Trans>testimonio1.4</Trans>
-						</p>
+						<div className="font-normal text-lg sm:text-xl">
+							<p>
+								<Trans>{`testimonio${n}.2`}</Trans>
+							</p>
+							<p>
+								<Trans>{`testimonio${n}.3`}</Trans>
+							</p>
+							<p>
+								<Trans>{`testimonio${n}.4`}</Trans>
+							</p>
+						</div>
 					</div>
-				</div>
-				<div className="w-full text-left xl:pr-48 sm:pr-28">
-					<p className="text-3xl sm:text-4xl !font-light mb-16">
-						<Trans>testimonio2.1</Trans>
-					</p>
-					<div className="font-normal text-lg sm:text-xl">
-						<p>
-							<Trans>testimonio2.2</Trans>
-						</p>
-						<p>
-							<Trans>testimonio2.3</Trans>
-						</p>
-						<p>
-							<Trans>testimonio2.4</Trans>
-						</p>
-					</div>
-				</div>
-				<div className="w-full text-left xl:pr-48 sm:pr-28">
-					<p className="text-3xl sm:text-4xl !font-light mb-16">
-						<Trans>testimonio3.1</Trans>
-					</p>
-					<div className="font-normal text-lg sm:text-xl">
-						<p>
-							<Trans>testimonio3.2</Trans>
-						</p>
-						<p>
-							<Trans>testimonio3.3</Trans>
-						</p>
-						<p>
-							<Trans>testimonio3.4</Trans>
-						</p>
-					</div>
-				</div>
-				<div className="w-full text-left xl:pr-48 sm:pr-28">
-					<p className="text-3xl sm:text-4xl !font-light mb-16">
-						<Trans>testimonio4.1</Trans>
-					</p>
-					<div className="font-normal text-lg sm:text-xl">
-						<p>
-							<Trans>testimonio4.2</Trans>
-						</p>
-						<p>
-							<Trans>testimonio4.3</Trans>
-						</p>
-						<p>
-							<Trans>testimonio4.4</Trans>
-						</p>
-					</div>
-				</div>
-				<div className="w-full text-left xl:pr-48 sm:pr-28">
-					<p className="text-3xl sm:text-4xl !font-light mb-16">
-						<Trans>testimonio5.1</Trans>
-					</p>
-					<div className="font-normal text-lg sm:text-xl">
-						<p>
-							<Trans>testimonio5.2</Trans>
-						</p>
-						<p>
-							<Trans>testimonio5.3</Trans>
-						</p>
-						<p>
-							<Trans>testimonio5.4</Trans>
-						</p>
-					</div>
-				</div>
+				))}
 			</Carousel>
 		</div>
 	);

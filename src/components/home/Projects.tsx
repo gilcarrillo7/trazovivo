@@ -22,168 +22,164 @@ import Project22 from "../../images/projects/22.gif";
 import Project23 from "../../images/projects/23.gif";
 import Project24 from "../../images/projects/24.gif";
 import Project25 from "../../images/projects/25.gif";
-import { Trans } from "react-i18next";
+import { Trans } from "gatsby-plugin-react-i18next";
 import { useState } from "react";
 
 const projects = [
-  {
-    title: "hivos.t0",
-    text: "hivos.t1",
-    img: Project25,
-    link: "hivos-futuros-urbanos",
-  },
-  {
-    title: "CARE Conecta",
-    text: "care.t0",
-    img: Project24,
-    link: "care-conecta",
-  },
-  {
-    title: "devlyn.t0",
-    text: "devlyn.t1",
-    img: Project23,
-    link: "fundacion-devlyn",
-  },
-  {
-    title: "Wingu",
-    text: "wingu.t0",
-    img: Project22,
-    link: "wingu",
-  },
-  {
-    title: "Oxfam",
-    text: "oxfam.t0",
-    img: Project21,
-    link: "oxfam",
-  },
-  {
-    title: "incl.t0",
-    text: "thi.t2",
-    img: Project20,
-    link: "iniciativa-x-la-inclusion",
-  },
-  {
-    title: "cfosc.t0",
-    text: "thi.t2",
-    img: Project18,
-    link: "cfosc",
-  },
-  {
-    title: "al.t0",
-    text: "Branding",
-    img: Project19,
-    link: "alianza-acercate",
-  },
-  {
-    title: "IRC - International Rescue Committee",
-    text: "Branding",
-    img: Project13,
-    link: "international-rescue-committee",
-  },
-  {
-    title: "Friedrich Ebert Stiftung",
-    text: "Estrategia de comunicación",
-    img: Project16,
-    link: "friedrich-ebert-stiftung",
-  },
-  {
-    title: "thi.t1",
-    text: "thi.t2",
-    img: Project17,
-    link: "thi",
-  },
-  {
-    title: "Incuba",
-    text: "Identidad gráfica y experiencia digital",
-    img: Project15,
-    link: "incuba",
-  },
-  {
-    title: "Ikaro",
-    text: "Nombre, Branding, Web",
-    img: Project14,
-    link: "ikaro",
-  },
-  {
-    title: "FZM - Feministisches Zentrum",
-    text: "Experiencia digital",
-    img: Project12,
-    link: "feministisches-zentrum-migrantinnen",
-  },
-  {
-    title: "Embajada de México en Alemania",
-    text: "Identidad gráfica",
-    img: Project11,
-    link: "salon_mexicano_de_ultramar",
-  },
-  {
-    title: "Embajada de México en Alemania",
-    text: "Identidad gráfica",
-    img: Project10,
-    link: "natur-poesie_instituto-cultural-mexico-alemania",
-  },
-  {
-    title: "icma.t1",
-    text: "Identidad gráfica",
-    img: Project9,
-    link: "instituto-cultural-mexico-alemania",
-  },
-  { title: "AXA", text: "Transformación digital", img: Project8, link: "axa" },
-  {
-    title: "Kreuzberger Himmel",
-    text: "UX/UI para tienda en línea",
-    img: Project7,
-    link: "kreuzberger-himmel",
-  },
-  {
-    title: "Himmel 8",
-    text: "Diseño y desarrollo de UX/UI para página web",
-    img: Project6,
-    link: "himmel-8",
-  },
-  {
-    title: "Coconat",
-    text: "Brochure de comunicación de la compañía",
-    img: Project5,
-    link: "coconat",
-  },
+	{
+		title: "hivos.t0",
+		text: "hivos.t1",
+		img: Project25,
+		link: "hivos-futuros-urbanos",
+	},
+	{
+		title: "CARE Conecta",
+		text: "care.t0",
+		img: Project24,
+		link: "care-conecta",
+	},
+	{
+		title: "devlyn.t0",
+		text: "devlyn.t1",
+		img: Project23,
+		link: "fundacion-devlyn",
+	},
+	{
+		title: "Wingu",
+		text: "wingu.t0",
+		img: Project22,
+		link: "wingu",
+	},
+	{
+		title: "Oxfam",
+		text: "oxfam.t0",
+		img: Project21,
+		link: "oxfam",
+	},
+	{
+		title: "incl.t0",
+		text: "thi.t2",
+		img: Project20,
+		link: "iniciativa-x-la-inclusion",
+	},
+	{
+		title: "cfosc.t0",
+		text: "thi.t2",
+		img: Project18,
+		link: "cfosc",
+	},
+	{
+		title: "al.t0",
+		text: "Branding",
+		img: Project19,
+		link: "alianza-acercate",
+	},
+	{
+		title: "IRC - International Rescue Committee",
+		text: "Branding",
+		img: Project13,
+		link: "international-rescue-committee",
+	},
+	{
+		title: "Friedrich Ebert Stiftung",
+		text: "Estrategia de comunicación",
+		img: Project16,
+		link: "friedrich-ebert-stiftung",
+	},
+	{
+		title: "thi.t1",
+		text: "thi.t2",
+		img: Project17,
+		link: "thi",
+	},
+	{
+		title: "Incuba",
+		text: "Identidad gráfica y experiencia digital",
+		img: Project15,
+		link: "incuba",
+	},
+	{
+		title: "Ikaro",
+		text: "Nombre, Branding, Web",
+		img: Project14,
+		link: "ikaro",
+	},
+	{
+		title: "FZM - Feministisches Zentrum",
+		text: "Experiencia digital",
+		img: Project12,
+		link: "feministisches-zentrum-migrantinnen",
+	},
+	{
+		title: "Embajada de México en Alemania",
+		text: "Identidad gráfica",
+		img: Project11,
+		link: "salon_mexicano_de_ultramar",
+	},
+	{
+		title: "Embajada de México en Alemania",
+		text: "Identidad gráfica",
+		img: Project10,
+		link: "natur-poesie_instituto-cultural-mexico-alemania",
+	},
+	{
+		title: "icma.t1",
+		text: "Identidad gráfica",
+		img: Project9,
+		link: "instituto-cultural-mexico-alemania",
+	},
+	{ title: "AXA", text: "Transformación digital", img: Project8, link: "axa" },
+	{
+		title: "Kreuzberger Himmel",
+		text: "UX/UI para tienda en línea",
+		img: Project7,
+		link: "kreuzberger-himmel",
+	},
+	{
+		title: "Himmel 8",
+		text: "Diseño y desarrollo de UX/UI para página web",
+		img: Project6,
+		link: "himmel-8",
+	},
+	{
+		title: "Coconat",
+		text: "Brochure de comunicación de la compañía",
+		img: Project5,
+		link: "coconat",
+	},
 ];
 
+const VISIBLE = 9;
+
 const Projects = () => {
-  const [all, setAll] = useState(false);
-  return (
-    <>
-      <div className="container grid sm:grid-cols-2 xl:grid-cols-3 sm:gap-x-12 xl:gap-x-24">
-        {projects.map((project, i) => (
-          <React.Fragment key={`${i}${project.title}`}>
-            {(all || i < 9) && (
-              <Project
-                img={project.img}
-                title={project.title}
-                text={project.text}
-                link={project.link || ""}
-                className={""}
-              />
-            )}
-          </React.Fragment>
-        ))}
-      </div>
-      {!all && (
-        <div className="text-center pb-8">
-          <a
-            className="text-2xl sm:text-3xl font-normal underline pb-8 text-center"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setAll(true);
-            }}
-          >
-            <Trans>Ver Todos</Trans>
-          </a>
-        </div>
-      )}
-    </>
-  );
+	const [all, setAll] = useState(false);
+	const shown = all ? projects : projects.slice(0, VISIBLE);
+	return (
+		<>
+			<div className="container grid sm:grid-cols-2 xl:grid-cols-3 sm:gap-x-12 xl:gap-x-24">
+				{shown.map((project) => (
+					<Project
+						key={project.link}
+						img={project.img}
+						title={project.title}
+						text={project.text}
+						link={project.link}
+					/>
+				))}
+			</div>
+			{!all && (
+				<div className="text-center pb-8">
+					<button
+						type="button"
+						className="text-2xl sm:text-3xl font-normal underline pb-8 text-center"
+						onClick={() => setAll(true)}
+					>
+						<Trans>Ver Todos</Trans>
+					</button>
+				</div>
+			)}
+		</>
+	);
 };
 
 export default Projects;

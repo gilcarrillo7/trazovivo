@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 
 import { AppContext } from "../../context/AppContext";
+import { bgColor, LayoutColor } from "./colors";
 
 interface IProps {
-	color: string;
+	color: LayoutColor;
 }
 
 const Hamburger = ({ color }: IProps) => {
 	const { menuOpen, setMenuOpen } = useContext(AppContext);
+	const bar = `block absolute h-1 w-7 ${bgColor[color]} transform transition duration-500 ease-in-out`;
 
 	return (
 		<button
@@ -15,25 +17,21 @@ const Hamburger = ({ color }: IProps) => {
 				menuOpen ? "text-white" : "text-black"
 			}`}
 			onClick={() => setMenuOpen(!menuOpen)}
+			aria-expanded={menuOpen}
+			aria-controls="main-menu"
 		>
 			<span className="sr-only">Menu</span>
 			<span
 				aria-hidden="true"
-				className={`block absolute h-1 w-7 bg-${color} transform transition duration-500 ease-in-out ${
-					menuOpen ? "rotate-45" : "-translate-y-3"
-				}`}
+				className={`${bar} ${menuOpen ? "rotate-45" : "-translate-y-3"}`}
 			></span>
 			<span
 				aria-hidden="true"
-				className={`block absolute h-1 w-7 bg-${color} transform transition duration-500 ease-in-out ${
-					menuOpen && "opacity-0"
-				}`}
+				className={`${bar} ${menuOpen ? "opacity-0" : ""}`}
 			></span>
 			<span
 				aria-hidden="true"
-				className={`block absolute h-1 w-7 bg-${color} transform  transition duration-500 ease-in-out ${
-					menuOpen ? "-rotate-45" : "translate-y-3"
-				}`}
+				className={`${bar} ${menuOpen ? "-rotate-45" : "translate-y-3"}`}
 			></span>
 		</button>
 	);

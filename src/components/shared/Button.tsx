@@ -1,9 +1,11 @@
 import React from "react";
-import { Trans } from "react-i18next";
+import { Trans } from "gatsby-plugin-react-i18next";
+
+type Variant = "white" | "whiteblack" | "purple" | "fillpurple";
 
 interface IProps {
 	text: string;
-	variant: string;
+	variant: Variant;
 	action?: () => void;
 	disabled?: boolean;
 	className?: string;
@@ -12,70 +14,39 @@ interface IProps {
 	mouseLeave?: () => void;
 }
 
+const base =
+	"w-full font-normal sm:w-60 border-solid border-2 text-xl p-2 py-3 sm:py-2";
+
+const variants: Record<Variant, string> = {
+	white:
+		"bg-transparent hover:bg-white border-white text-white hover:text-tvpink",
+	whiteblack:
+		"bg-transparent hover:bg-white border-white text-white hover:text-black",
+	purple:
+		"bg-transparent hover:bg-tvpurple border-tvpurple text-tvpurple hover:text-white",
+	fillpurple: "bg-tvpurple border-tvpurple text-white",
+};
+
 const Button = ({
 	text,
 	action,
 	disabled,
-	className,
+	className = "",
 	variant,
-	type,
+	type = "button",
 	mouseOver,
 	mouseLeave,
-}: IProps) => {
-	return (
-		<>
-			{variant === "white" && (
-				<button
-					className={`w-full font-normal sm:w-60 bg-transparent hover:bg-white border-solid border-2 border-white text-xl p-2 py-3 sm:py-2 text-white hover:text-tvpink ${
-						className ? className : ""
-					}`}
-					onClick={action}
-					type={type ? type : "button"}
-					disabled={disabled}
-					onMouseEnter={mouseOver}
-					onMouseLeave={mouseLeave}
-				>
-					<Trans>{text}</Trans>
-				</button>
-			)}
-			{variant === "whiteblack" && (
-				<button
-					className={`w-full font-normal sm:w-60 bg-transparent hover:bg-white border-solid border-2 border-white text-xl p-2 py-3 sm:py-2 text-white hover:text-black ${
-						className ? className : ""
-					}`}
-					onClick={action}
-					type={type ? type : "button"}
-					disabled={disabled}
-				>
-					<Trans>{text}</Trans>
-				</button>
-			)}
-			{variant === "purple" && (
-				<button
-					className={`w-full font-normal sm:w-60 bg-transparent hover:bg-tvpurple border-solid border-2 border-tvpurple text-xl p-2 py-3 sm:py-2 text-tvpurple hover:text-white ${
-						className ? className : ""
-					}`}
-					onClick={action}
-					type={type ? type : "button"}
-					disabled={disabled}
-				>
-					<Trans>{text}</Trans>
-				</button>
-			)}
-			{variant === "fillpurple" && (
-				<button
-					className={`w-full font-normal sm:w-60 bg-tvpurple border-solid border-2 border-tvpurple text-xl p-2 py-3 sm:py-2 text-white ${
-						className ? className : ""
-					}`}
-					onClick={action}
-					type={type ? type : "button"}
-					disabled={disabled}
-				>
-					<Trans>{text}</Trans>
-				</button>
-			)}
-		</>
-	);
-};
+}: IProps) => (
+	<button
+		className={`${base} ${variants[variant]} ${className}`}
+		onClick={action}
+		type={type}
+		disabled={disabled}
+		onMouseEnter={mouseOver}
+		onMouseLeave={mouseLeave}
+	>
+		<Trans>{text}</Trans>
+	</button>
+);
 
 export default Button;
