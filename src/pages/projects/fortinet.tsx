@@ -76,7 +76,7 @@ export default fortinet;
 
 export const query = graphql`
 	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "fortinet", "projects"] } }) {
 			edges {
 				node {
 					ns

@@ -46,28 +46,39 @@ Every file in `src/pages/projects/` follows the same shape (see `coconat.tsx` as
    `<Footer className="..." />`.
 6. Export `Head` using `SEO` (`src/components/layout/SEO.tsx`) for per-page meta/OG tags.
 7. Include the standard `locales: allLocale` GraphQL query at the bottom — required by
-   `gatsby-plugin-react-i18next` for translations to hydrate on that page.
+   `gatsby-plugin-react-i18next` for translations to hydrate on that page. It must filter
+   `ns: { in: [...] }` so the page only ships the namespaces it uses; don't write that list by
+   hand, run `npm run i18n:check -- --fix` (it follows the page's imports).
 
 To add a new project page:
 
 1. Create `src/pages/projects/<slug>.tsx` following the pattern above, with its images in
    `src/images/<slug>/`. Use `<NextProject slug="<slug>" />` (order comes from the registry) and
    `<BulletList title="common.tasks" items={[...keys]} />` for the "Tareas / Objetivos" lists.
-2. Add the texts to both `locales/es/projects.json` and `locales/en/projects.json`. Reuse the
-   `common.*` keys (e.g. `common.tasks`, `common.goals`) instead of repeating shared strings.
+2. Put the page's texts in `locales/es/<prefix>.json` and `locales/en/<prefix>.json` (one
+   namespace per project; `<prefix>` is the key prefix, e.g. `devlyn.t3` lives in `devlyn.json`).
+   Only the keys shown on the homepage card (title/text) go in `projects.json`, together with the
+   shared `common.*` strings (e.g. `common.tasks`, `common.goals`) — reuse those instead of repeating them.
 3. Add an entry **at the top** of the `projects` array in `src/data/projects.ts` (slug, title,
    text, img). That feeds the homepage grid and the "next project" order — don't edit the
    previous project's `NextProject`.
-4. Run `npm run i18n:check` (es/en parity, undefined and unused keys).
+4. Run `npm run i18n:check -- --fix` to write the page's `ns` filter, then `npm run i18n:check`
+   (es/en parity, undefined/unused keys, page namespaces).
 
 ### i18n
 
 Configured via `gatsby-plugin-react-i18next` in `gatsby-config.ts`: languages `en`/`es`, default
-`es`, translations sourced from `locales/<lang>/*.json` (one namespace file per page area:
-`index`, `contacto`, `personal`, `projects`, `testimonios`, `valores`). Use `<Trans>` for
-translated copy; the key-as-default-text convention is only used for short static strings —
-longer copy uses `namespace.tN` style keys (e.g. `coconat.t1`, `hivos.t0`) defined in the JSON files. Strings shared by several projects
-(e.g. "Tareas:") live under `common.*` in `projects.json`.
+`es`, translations sourced from `locales/<lang>/<ns>.json` — the file name is the namespace and
+subfolders aren't supported. Namespaces: `index` (global UI, always loaded), `contacto`,
+`personal`, `testimonios`, `valores`, `projects` (homepage cards + `common.*`/`subtitle.*`
+shared strings) and one per case study named after its key prefix (`devlyn`, `care`, `thi`…).
+Each page loads only the namespaces in its query's `ns` filter (the plugin's `fallbackNS` then
+resolves any key across them, so `<Trans>` needs no `ns` prop). A key missing from the loaded
+namespaces silently renders as its own text, so run `npm run i18n:check` after adding pages or keys.
+
+Use `<Trans>` for translated copy; the key-as-default-text convention is only used for short
+static strings — longer copy uses `prefix.tN` style keys (e.g. `coconat.t1`, `hivos.t0`).
+Strings shared by several projects (e.g. "Tareas:") live under `common.*` in `projects.json`.
 
 ### Global state
 

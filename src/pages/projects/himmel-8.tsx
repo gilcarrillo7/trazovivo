@@ -44,7 +44,7 @@ export default h8;
 
 export const query = graphql`
 	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "himmel8", "projects"] } }) {
 			edges {
 				node {
 					ns

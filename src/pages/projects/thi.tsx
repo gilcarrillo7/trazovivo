@@ -158,7 +158,7 @@ export default Thi;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "projects", "thi"] } }) {
       edges {
         node {
           ns
