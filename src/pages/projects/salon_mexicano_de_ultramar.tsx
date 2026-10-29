@@ -44,15 +44,15 @@ const smu = () => {
 						></ReactPlayer>
 					</div>
 				</div>
-				<HeadTitle title="smu.t1" className="text-white">
+				<HeadTitle title="salonmexicano.t1" className="text-white">
 					<Paragraph>
-						<Trans>smu.t2</Trans>
+						<Trans>salonmexicano.t2</Trans>
 					</Paragraph>
 					<Paragraph>
-						<Trans>smu.t3</Trans>
+						<Trans>salonmexicano.t3</Trans>
 					</Paragraph>
 					<Paragraph>
-						<Trans>smu.t4</Trans>
+						<Trans>salonmexicano.t4</Trans>
 					</Paragraph>
 				</HeadTitle>
 				<TwoImagesSpace space="sm" alt="smu" leftimg={img2} rightimg={img3} />
@@ -64,7 +64,7 @@ const smu = () => {
 				<TwoImagesSpace space="sm" alt="smu" leftimg={img12} rightimg={img13} />
 				<TextContainer className="text-white">
 					<Paragraph>
-						<Trans>smu.t5</Trans>
+						<Trans>salonmexicano.t5</Trans>
 					</Paragraph>
 				</TextContainer>
 				<NextProject

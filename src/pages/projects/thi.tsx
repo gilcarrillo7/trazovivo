@@ -46,7 +46,7 @@ const Thi = () => {
           <Trans>thi.t5</Trans>
         </Paragraph>
         <Paragraph>
-          <Trans>thi.t6</Trans>
+          <Trans>common.objetivos-de-la-colaboracion</Trans>
           <ul className="list-disc pl-4">
             <li>
               <Trans>thi.t7</Trans>
@@ -55,7 +55,7 @@ const Thi = () => {
               <Trans>thi.t8</Trans>
             </li>
             <li>
-              <Trans>thi.t9</Trans>
+              <Trans>common.lograr-mayor-reconocimiento-de-las</Trans>
             </li>
             <li>
               <Trans>thi.t10</Trans>
@@ -72,22 +72,22 @@ const Thi = () => {
           <Trans>thi.t13</Trans>
         </Paragraph>
         <Paragraph>
-          <Trans>thi.t14</Trans>
+          <Trans>common.tasks</Trans>
           <ul className="list-disc pl-4">
             <li>
-              <Trans>thi.t15</Trans>
+              <Trans>common.plataforma-digital</Trans>
             </li>
             <li>
-              <Trans>thi.t16</Trans>
+              <Trans>common.estrategia-de-comunicacion</Trans>
             </li>
             <li>
-              <Trans>thi.t17</Trans>
+              <Trans>common.identidad-grafica</Trans>
             </li>
             <li>
-              <Trans>thi.t18</Trans>
+              <Trans>common.materiales-audiovisuales</Trans>
             </li>
             <li>
-              <Trans>thi.t19</Trans>
+              <Trans>common.campana-en-redes-sociales</Trans>
             </li>
           </ul>
         </Paragraph>

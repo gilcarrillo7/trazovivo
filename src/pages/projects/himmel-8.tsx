@@ -27,7 +27,7 @@ const h8 = () => {
 			<FullImage img={img1} alt="h8" />
 			<HeadTitle title="Himmel 8">
 				<p>
-					<Trans>h8.t1</Trans>
+					<Trans>himmel8.t1</Trans>
 				</p>
 			</HeadTitle>
 			<FullImage img={img2} alt="h8" />

@@ -34,20 +34,20 @@ const npi = () => {
 				<FullImage img={img1} alt="npi" />
 				<HeadTitle title="Natur Poesie" className="text-white">
 					<Paragraph>
-						<Trans>npi.t1</Trans>
+						<Trans>naturpoesie.t1</Trans>
 					</Paragraph>
 					<Paragraph>
-						<Trans>npi.t2</Trans>
+						<Trans>naturpoesie.t2</Trans>
 					</Paragraph>
 					<Paragraph>
-						<Trans>npi.t3</Trans>
+						<Trans>naturpoesie.t3</Trans>
 					</Paragraph>
 				</HeadTitle>
 				<TwoImagesSpace space="sm" alt="npi" leftimg={img2} rightimg={img3} />
 				<TwoImagesSpace space="sm" alt="npi" leftimg={img4} rightimg={img5} />
 				<TextContainer className="text-white">
 					<Paragraph>
-						<Trans>npi.t4</Trans>
+						<Trans>naturpoesie.t4</Trans>
 					</Paragraph>
 				</TextContainer>
 				<FullImage img={img6} alt="npi" />
@@ -57,10 +57,10 @@ const npi = () => {
 				<TwoImagesSpace space="sm" alt="npi" leftimg={img10} />
 				<TextContainer className="text-white">
 					<Paragraph>
-						<Trans>npi.t5</Trans>
+						<Trans>naturpoesie.t5</Trans>
 					</Paragraph>
 					<Paragraph>
-						<Trans>npi.t6</Trans>
+						<Trans>naturpoesie.t6</Trans>
 					</Paragraph>
 				</TextContainer>
 				<NextProject

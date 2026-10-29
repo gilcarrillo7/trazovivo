@@ -9,6 +9,7 @@ import {
   TwoImagesSpace,
   NextProject,
   AllProject,
+  BulletList,
 } from "../../components/projects";
 
 import img1 from "../../images/devlyn/1.jpg";
@@ -31,7 +32,7 @@ export const Head = () => (
   <SEO
     title="Trazo Vivo - Fundación Devlyn"
     image="https://trazovivo.com/mailing/devlyn.gif"
-    url="/projects/devlyn-conecta"
+    url="/projects/fundacion-devlyn"
   />
 );
 
@@ -52,69 +53,37 @@ const Devlyn = () => {
             <Trans>devlyn.t4</Trans>
           </span>
         </Paragraph>
-        <Paragraph>
-          <span className="font-bold">
-            <Trans>devlyn.t5</Trans>
-          </span>
-          <ul className="list-disc pl-4">
-            <li>
-              <Trans>devlyn.t6</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t7</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t8</Trans>
-            </li>
-          </ul>
-        </Paragraph>
+        <BulletList
+          title="devlyn.t5"
+          items={[
+            "devlyn.t6",
+            "devlyn.t7",
+            "devlyn.t8",
+          ]}
+        />
         <Paragraph className="">
           <Trans>devlyn.t9</Trans>
         </Paragraph>
-        <Paragraph>
-          <span className="font-bold">
-            <Trans>devlyn.t10</Trans>
-          </span>
-          <ul className="list-disc pl-4">
-            <li>
-              <Trans>devlyn.t11</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t12</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t13</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t14</Trans>
-            </li>
-          </ul>
-        </Paragraph>
-        <Paragraph>
-          <span className="font-bold">
-            <Trans>devlyn.t15</Trans>
-          </span>
-          <ul className="list-disc pl-4">
-            <li>
-              <Trans>devlyn.t16</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t17</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t18</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t19</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t20</Trans>
-            </li>
-            <li>
-              <Trans>devlyn.t21</Trans>
-            </li>
-          </ul>
-        </Paragraph>
+        <BulletList
+          title="common.goals"
+          items={[
+            "common.mejorar-posicionamiento-social",
+            "common.generar-conexiones-profundas-con-su",
+            "common.aumentar-alianzas-estrategicas",
+            "devlyn.t14",
+          ]}
+        />
+        <BulletList
+          title="common.tasks"
+          items={[
+            "devlyn.t16",
+            "devlyn.t17",
+            "common.definicion-y-ejecucion-de-estrategia",
+            "devlyn.t19",
+            "devlyn.t20",
+            "devlyn.t21",
+          ]}
+        />
       </HeadTitle>
       <FullImage img={img2} alt="devlyn" />
       <BigText text="devlyn.t22" />
@@ -138,7 +107,7 @@ const Devlyn = () => {
       <TwoImagesSpace space="sm" alt="devlyn" leftimg={img8} rightimg={img9} />
       <FullImage img={img10} alt="devlyn" />
       <FullImage img={img11} alt="devlyn" />
-      <NextProject link="/projects/wingu" />
+      <NextProject slug="fundacion-devlyn" />
       <AllProject link="/#projects" />
       <Footer className={"bg-black text-white"} />
     </Layout>

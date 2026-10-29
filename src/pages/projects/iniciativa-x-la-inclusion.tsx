@@ -64,7 +64,7 @@ const Cfosc = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>incl.t7</Trans>
+            <Trans>common.goals</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
@@ -74,10 +74,10 @@ const Cfosc = () => {
               <Trans>incl.t9</Trans>
             </li>
             <li>
-              <Trans>incl.t10</Trans>
+              <Trans>common.aumentar-alianzas-estrategicas</Trans>
             </li>
             <li>
-              <Trans>incl.t11</Trans>
+              <Trans>common.generar-conexiones-profundas-con-su</Trans>
             </li>
             <li>
               <Trans>incl.t12</Trans>
@@ -86,17 +86,17 @@ const Cfosc = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>incl.t13</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
-              <Trans>incl.t14</Trans>
+              <Trans>common.definicion-de-esencia-de-marca</Trans>
             </li>
             <li>
-              <Trans>incl.t15</Trans>
+              <Trans>common.desarrollo-de-identidad-grafica</Trans>
             </li>
             <li>
-              <Trans>incl.t16</Trans>
+              <Trans>common.definicion-y-ejecucion-de-estrategia</Trans>
             </li>
             <li>
               <Trans>incl.t17</Trans>

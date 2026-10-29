@@ -42,17 +42,23 @@ Every file in `src/pages/projects/` follows the same shape (see `coconat.tsx` as
 4. All copy goes through `<Trans>key</Trans>` (from `gatsby-plugin-react-i18next` /
    `react-i18next`) with the key defined in `locales/{en,es}/projects.json` — never hardcode
    paragraph copy inline in the page component.
-5. End with `<NextProject link="/projects/<next-slug>" />`, `<AllProject link="/#projects" />`, and
+5. End with `<NextProject slug="<this-slug>" />` (next project comes from `src/data/projects.ts`), `<AllProject link="/#projects" />`, and
    `<Footer className="..." />`.
 6. Export `Head` using `SEO` (`src/components/layout/SEO.tsx`) for per-page meta/OG tags.
 7. Include the standard `locales: allLocale` GraphQL query at the bottom — required by
    `gatsby-plugin-react-i18next` for translations to hydrate on that page.
 
-To add a new project page: create `src/pages/projects/<slug>.tsx` following this pattern, add its
-images under `src/images/<slug>/`, add translation keys to both `locales/en/projects.json` and
-`locales/es/projects.json`, and add an entry to the `projects` array in
-`src/components/home/Projects.tsx` (title/text/img/link) so it shows up on the homepage grid —
-update the previous "latest" project's `NextProject` link to point at the new page.
+To add a new project page:
+
+1. Create `src/pages/projects/<slug>.tsx` following the pattern above, with its images in
+   `src/images/<slug>/`. Use `<NextProject slug="<slug>" />` (order comes from the registry) and
+   `<BulletList title="common.tasks" items={[...keys]} />` for the "Tareas / Objetivos" lists.
+2. Add the texts to both `locales/es/projects.json` and `locales/en/projects.json`. Reuse the
+   `common.*` keys (e.g. `common.tasks`, `common.goals`) instead of repeating shared strings.
+3. Add an entry **at the top** of the `projects` array in `src/data/projects.ts` (slug, title,
+   text, img). That feeds the homepage grid and the "next project" order — don't edit the
+   previous project's `NextProject`.
+4. Run `npm run i18n:check` (es/en parity, undefined and unused keys).
 
 ### i18n
 
@@ -60,7 +66,8 @@ Configured via `gatsby-plugin-react-i18next` in `gatsby-config.ts`: languages `e
 `es`, translations sourced from `locales/<lang>/*.json` (one namespace file per page area:
 `index`, `contacto`, `personal`, `projects`, `testimonios`, `valores`). Use `<Trans>` for
 translated copy; the key-as-default-text convention is only used for short static strings —
-longer copy uses `namespace.tN` style keys (e.g. `coco.t1`, `hivos.t0`) defined in the JSON files.
+longer copy uses `namespace.tN` style keys (e.g. `coconat.t1`, `hivos.t0`) defined in the JSON files. Strings shared by several projects
+(e.g. "Tareas:") live under `common.*` in `projects.json`.
 
 ### Global state
 

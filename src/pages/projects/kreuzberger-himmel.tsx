@@ -26,20 +26,20 @@ const kh = () => {
 			<FullImage img={img1} alt="kh" />
 			<HeadTitle title="Kreuzberger Himmel">
 				<Paragraph>
-					<Trans>kh.t1</Trans>
+					<Trans>kreuzberger.t1</Trans>
 				</Paragraph>
 				<Paragraph>
-					<Trans>kh.t2</Trans>
+					<Trans>kreuzberger.t2</Trans>
 				</Paragraph>
 				<Paragraph>
-					<Trans>kh.t3</Trans>
+					<Trans>kreuzberger.t3</Trans>
 				</Paragraph>
 			</HeadTitle>
 			<FullImage img={img2} alt="kh" />
 			<FullImage img={img3} alt="kh" />
 			<TextContainer>
 				<Paragraph className="!mb-0">
-					<Trans>kh.t4</Trans>
+					<Trans>kreuzberger.t4</Trans>
 				</Paragraph>
 			</TextContainer>
 			<FullImage img={img4} alt="kh" />

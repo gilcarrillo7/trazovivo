@@ -74,14 +74,14 @@ const Alianza = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>al.t11</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
               <Trans>al.t12</Trans>
             </li>
             <li>
-              <Trans>al.t13</Trans>
+              <Trans>common.desarrollo-de-identidad-grafica</Trans>
             </li>
             <li>
               <Trans>al.t14</Trans>

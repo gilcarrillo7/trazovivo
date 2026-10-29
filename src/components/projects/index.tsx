@@ -1,5 +1,6 @@
 export { default as AllProject } from "./AllProject";
 export { default as BigText } from "./BigText";
+export { default as BulletList } from "./BulletList";
 export { default as FullImage } from "./FullImage";
 export { default as HeadTitle } from "./HeadTitle";
 export { default as ImageBand } from "./ImageBand";
