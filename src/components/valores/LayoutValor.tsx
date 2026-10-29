@@ -15,14 +15,11 @@ import Whatsapp from "../icons/Whatsapp";
 import Footer from "../layout/Footer";
 import InnerBigContainer from "../layout/InnerBigContainer";
 import Button from "../shared/Button";
-import { Link, navigate } from "gatsby";
-import { useInView } from "react-intersection-observer";
-import { Trans } from "react-i18next";
-import { useState } from "react";
-import { ColorRing } from "react-loader-spinner";
+import { Link, Trans, useI18next } from "gatsby-plugin-react-i18next";
+import useReveal from "../../hooks/useReveal";
 
 interface IProps {
-	children: boolean | React.ReactFragment | React.ReactPortal | React.ReactNode;
+	children: React.ReactNode;
 	classVideo: string;
 	video: string;
 	url: string;
@@ -31,10 +28,18 @@ interface IProps {
 	share?: boolean;
 }
 
-const Personal = () => {
-	const { ref, inView } = useInView({ threshold: 0.5 });
+interface IPromoProps {
+	to: string;
+	title: string;
+	text: string;
+	boxClass: string;
+	children: React.ReactNode;
+}
+
+const PromoCard = ({ to, title, text, boxClass, children }: IPromoProps) => {
+	const { ref, inView } = useReveal(0.5);
 	return (
-		<Link to="/personal">
+		<Link to={to}>
 			<div
 				ref={ref}
 				className={`text-lg sm:text-xl mb-16 hover:underline transition-all duration-1000 ease-in-out ${
@@ -42,120 +47,68 @@ const Personal = () => {
 				}`}
 			>
 				<p className="font-bold mb-6">
-					<Trans>Personal</Trans>
+					<Trans>{title}</Trans>
 				</p>
-				<div className="w-full flex justify-center items-center bg-tvpink p-10 sm:p-7">
-					<div className="rounded-full bg-tvpurple w-32 sm:w-20 h-32 sm:h-20"></div>
+				<div className={`w-full flex justify-center items-center ${boxClass}`}>
+					{children}
 				</div>
 				<p className="text-base sm:text-lg mt-4">
-					<Trans>Conoce a las personas que conformamos Trazo Vivo</Trans>.
+					<Trans>{text}</Trans>.
 				</p>
 			</div>
 		</Link>
 	);
 };
-const Proyectos = () => {
-	const { ref, inView } = useInView({ threshold: 0.5 });
-	return (
-		<Link to="/#projects">
-			<div
-				ref={ref}
-				className={`text-lg sm:text-xl mb-16 hover:underline transition-all duration-1000 ease-in-out ${
-					inView ? "opacity-100" : "opacity-0 -translate-y-8"
-				}`}
-			>
-				<p className="font-bold mb-6">
-					<Trans>Proyectos</Trans>
-				</p>
-				<div className="w-full flex justify-center items-center bg-tvpurple p-10 sm:p-7">
-					<div className="triangle"></div>
-				</div>
-				<p className="text-base sm:text-lg mt-4">
-					<Trans>Descubre como hemos ayudado a nuestros clientes</Trans>.
-				</p>
-			</div>
-		</Link>
-	);
-};
-const Valores = () => {
-	const { ref, inView } = useInView({ threshold: 0.5 });
-	return (
-		<Link to="/valores">
-			<div
-				ref={ref}
-				className={`text-lg sm:text-xl mb-16 hover:underline transition-all duration-1000 ease-in-out ${
-					inView ? "opacity-100" : "opacity-0 -translate-y-8"
-				}`}
-			>
-				<p className="font-bold mb-6">
-					<Trans>Valores</Trans>
-				</p>
-				<div className="w-full flex justify-center items-center bg-tvyellow p-14 sm:p-7">
-					<svg
-						className="scale-125 sm:scale-100"
-						width="100"
-						height="70"
-						viewBox="0 0 100 70"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M8.25989 4.84002C8.25989 6.39002 6.99989 7.65002 5.44989 7.65002C3.89989 7.65002 2.63989 6.39002 2.63989 4.84002C2.63989 3.28002 3.89989 2.02002 5.44989 2.02002C6.99989 2.02002 8.25989 3.28002 8.25989 4.84002Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M38.0199 4.84002C38.0199 6.39002 36.7599 7.65002 35.2099 7.65002C33.6599 7.65002 32.3999 6.39002 32.3999 4.84002C32.3999 3.28002 33.6599 2.02002 35.2099 2.02002C36.7699 2.02002 38.0199 3.28002 38.0199 4.84002Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M67.7799 4.84002C67.7799 6.39002 66.5199 7.65002 64.9699 7.65002C63.4199 7.65002 62.1599 6.39002 62.1599 4.84002C62.1599 3.28002 63.4199 2.02002 64.9699 2.02002C66.5199 2.02002 67.7799 3.28002 67.7799 4.84002Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M97.5499 4.84002C97.5499 6.39002 96.2899 7.65002 94.7399 7.65002C93.1899 7.65002 91.9299 6.39002 91.9299 4.84002C91.9299 3.28002 93.1899 2.02002 94.7399 2.02002C96.2899 2.02002 97.5499 3.28002 97.5499 4.84002Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M8.25989 34.88C8.25989 36.43 6.99989 37.69 5.44989 37.69C3.89989 37.69 2.63989 36.43 2.63989 34.88C2.63989 33.33 3.89989 32.07 5.44989 32.07C6.99989 32.06 8.25989 33.32 8.25989 34.88Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M38.0199 34.88C38.0199 36.43 36.7599 37.69 35.2099 37.69C33.6599 37.69 32.3999 36.43 32.3999 34.88C32.3999 33.33 33.6599 32.07 35.2099 32.07C36.7699 32.06 38.0199 33.32 38.0199 34.88Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M67.7799 34.88C67.7799 36.43 66.5199 37.69 64.9699 37.69C63.4199 37.69 62.1599 36.43 62.1599 34.88C62.1599 33.33 63.4199 32.07 64.9699 32.07C66.5199 32.06 67.7799 33.32 67.7799 34.88Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M97.5499 34.88C97.5499 36.43 96.2899 37.69 94.7399 37.69C93.1899 37.69 91.9299 36.43 91.9299 34.88C91.9299 33.33 93.1899 32.07 94.7399 32.07C96.2899 32.06 97.5499 33.32 97.5499 34.88Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M8.25989 64.91C8.25989 66.47 6.99989 67.72 5.44989 67.72C3.89989 67.72 2.63989 66.47 2.63989 64.91C2.63989 63.36 3.89989 62.1 5.44989 62.1C6.99989 62.1 8.25989 63.36 8.25989 64.91Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M38.0199 64.91C38.0199 66.47 36.7599 67.72 35.2099 67.72C33.6599 67.72 32.3999 66.47 32.3999 64.91C32.3999 63.36 33.6599 62.1 35.2099 62.1C36.7699 62.1 38.0199 63.36 38.0199 64.91Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M67.7799 64.91C67.7799 66.47 66.5199 67.72 64.9699 67.72C63.4199 67.72 62.1599 66.47 62.1599 64.91C62.1599 63.36 63.4199 62.1 64.9699 62.1C66.5199 62.1 67.7799 63.36 67.7799 64.91Z"
-							fill="#D10058"
-						/>
-						<path
-							d="M97.5499 64.91C97.5499 66.47 96.2899 67.72 94.7399 67.72C93.1899 67.72 91.9299 66.47 91.9299 64.91C91.9299 63.36 93.1899 62.1 94.7399 62.1C96.2899 62.1 97.5499 63.36 97.5499 64.91Z"
-							fill="#D10058"
-						/>
-					</svg>
-				</div>
-				<p className="text-base sm:text-lg mt-4">
-					<Trans>Conoce los valores bajo los cuales nos inspiramos</Trans>.
-				</p>
-			</div>
-		</Link>
-	);
-};
+
+const dotXs = [5.45, 35.21, 64.97, 94.74];
+const dotYs = [4.84, 34.88, 64.91];
+
+const Personal = () => (
+	<PromoCard
+		to="/personal"
+		title="Personal"
+		text="Conoce a las personas que conformamos Trazo Vivo"
+		boxClass="bg-tvpink p-10 sm:p-7"
+	>
+		<div className="rounded-full bg-tvpurple w-32 sm:w-20 h-32 sm:h-20"></div>
+	</PromoCard>
+);
+
+const Proyectos = () => (
+	<PromoCard
+		to="/#projects"
+		title="Proyectos"
+		text="Descubre como hemos ayudado a nuestros clientes"
+		boxClass="bg-tvpurple p-10 sm:p-7"
+	>
+		<div className="triangle"></div>
+	</PromoCard>
+);
+
+const Valores = () => (
+	<PromoCard
+		to="/valores"
+		title="Valores"
+		text="Conoce los valores bajo los cuales nos inspiramos"
+		boxClass="bg-tvyellow p-14 sm:p-7"
+	>
+		<svg
+			className="scale-125 sm:scale-100"
+			width="100"
+			height="70"
+			viewBox="0 0 100 70"
+			fill="none"
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			{dotYs.flatMap((cy) =>
+				dotXs.map((cx) => (
+					<circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={2.81} fill="#D10058" />
+				)),
+			)}
+		</svg>
+	</PromoCard>
+);
 
 const LayoutValor = (props: IProps) => {
 	const {
@@ -167,24 +120,11 @@ const LayoutValor = (props: IProps) => {
 		share = true,
 	} = props;
 
-	const [loaded, setLoaded] = useState(true);
+	const { navigate } = useI18next();
 
 	return (
 		<>
-			{!loaded && (
-				<div className="min-h-screen min-w-screen flex justify-center items-center">
-					<ColorRing
-						visible={true}
-						height="80"
-						width="80"
-						ariaLabel="blocks-loading"
-						wrapperStyle={{}}
-						wrapperClass="blocks-wrapper"
-						colors={["#D10058", "#D10058", "#D10058", "#D10058", "#D10058"]}
-					/>
-				</div>
-			)}
-			<div className={`${loaded ? "" : "opacity-0"}`}>
+			<div>
 				<div
 					className={`sm:w-screen sm:pb-6 lg:pb-10 sm:pt-1 flex items-center ${classVideo}`}
 				>
@@ -213,19 +153,23 @@ const LayoutValor = (props: IProps) => {
 							)}
 							{share && (
 								<div className="flex justify-between items-center px-4 sm:px-0 mt-12 sm:w-72">
-									<TwitterShareButton url={url}>
+									<TwitterShareButton url={url} aria-label="Twitter">
 										<Twitter />
 									</TwitterShareButton>
-									<FacebookShareButton url={url}>
+									<FacebookShareButton url={url} aria-label="Facebook">
 										<Facebook />
 									</FacebookShareButton>
-									<LinkedinShareButton url={url}>
-										<Linkedin className="scale-125" color="black" />
+									<LinkedinShareButton url={url} aria-label="Linkedin">
+										<Linkedin
+											className="scale-125"
+											color="black"
+											link={false}
+										/>
 									</LinkedinShareButton>
-									<WhatsappShareButton url={url}>
+									<WhatsappShareButton url={url} aria-label="Whatsapp">
 										<Whatsapp />
 									</WhatsappShareButton>
-									<EmailShareButton url={url}>
+									<EmailShareButton url={url} aria-label="Email">
 										<Mail />
 									</EmailShareButton>
 								</div>

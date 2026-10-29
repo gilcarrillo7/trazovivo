@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Trans } from "react-i18next";
-import { useInView } from "react-intersection-observer";
+import { Trans } from "gatsby-plugin-react-i18next";
+import useReveal from "../../hooks/useReveal";
 
 const ImageBand = ({
 	img,
@@ -11,7 +11,7 @@ const ImageBand = ({
 	alt: string;
 	text: string;
 }) => {
-	const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.5 });
+	const { ref, inView } = useReveal(0.5);
 	return (
 		<div className="relative">
 			<div
@@ -23,11 +23,13 @@ const ImageBand = ({
 						className={`z-10 w-full sm:w-1/2 grow-0 mb-8 sm:mb-0 px-8 sm:px-0`}
 					>
 						<img
-							ref={ref1}
+							ref={ref}
 							src={img}
 							alt={alt}
+							loading="lazy"
+							decoding="async"
 							className={`w-full transition-all duration-1000 ease-in-out ${
-								inView1 ? "opacity-100" : "opacity-0 scale-150"
+								inView ? "opacity-100" : "opacity-0 scale-150"
 							}`}
 						/>
 					</div>

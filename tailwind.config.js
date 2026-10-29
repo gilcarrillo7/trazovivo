@@ -3,7 +3,6 @@ module.exports = {
 	content: [
 		"./src/pages/**/*.{js,jsx,ts,tsx}",
 		"./src/components/**/*.{js,jsx,ts,tsx}",
-		"./node_modules/tw-elements/dist/js/**/*.js",
 	],
 	theme: {
 		container: {
@@ -24,6 +23,9 @@ module.exports = {
 				tvpink: "#D10058",
 				tvpurple: "#5830A0",
 				tvyellow: "#FFC80E",
+			},
+			gridTemplateColumns: {
+				20: "repeat(20, minmax(0, 1fr))",
 			},
 			flex: {
 				2: "1 0 45%",

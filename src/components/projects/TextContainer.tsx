@@ -1,12 +1,12 @@
 import * as React from "react";
-import { useInView } from "react-intersection-observer";
+import useReveal from "../../hooks/useReveal";
 
 const TextContainer = (props: {
 	children: React.ReactNode;
 	className?: string;
 }) => {
-	const { className } = props;
-	const { ref, inView } = useInView({ threshold: 0.2 });
+	const { className = "" } = props;
+	const { ref, inView } = useReveal(0.2);
 	return (
 		<div
 			ref={ref}

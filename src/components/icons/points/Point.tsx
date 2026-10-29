@@ -1,28 +1,29 @@
-import React, { useContext, useMemo } from "react";
+import React, { memo } from "react";
 import { useSpring, animated } from "react-spring";
-import { AppContext } from "../../../context/AppContext";
-import useWindowSize from "../../../hooks/useWindowWide";
 
-const Point = ({
-	className = "",
-	center = false,
-	hor,
-	ver,
-}: {
+interface IProps {
 	className?: string;
 	center: boolean;
 	hor: number;
 	ver: number;
-}) => {
-	const { hoverReel } = useContext(AppContext);
-	const { width } = useWindowSize();
-	const left = useMemo(() => (width < 640 ? hor * 0.8 : hor), [width, hor]);
-	const top = useMemo(() => (width < 640 ? ver * 0.8 : ver), [width, ver]);
-	const dist = useMemo(() => (width < 640 ? 0.5 : 1.5), [width]);
-	const rnd = useMemo(
-		() => Math.floor(Math.random() * (center ? 1000 : 500)),
-		[center]
-	);
+	hoverReel: boolean;
+	small: boolean;
+	delay: number;
+}
+
+const Point = ({
+	className = "",
+	center,
+	hor,
+	ver,
+	hoverReel,
+	small,
+	delay,
+}: IProps) => {
+	const left = small ? hor * 0.8 : hor;
+	const top = small ? ver * 0.8 : ver;
+	const dist = small ? 0.5 : 1.5;
+
 	const styles = useSpring({
 		to: hoverReel
 			? [
@@ -36,10 +37,10 @@ const Point = ({
 							: `${top}rem`,
 					},
 					{ transform: center ? "scale(3,3)" : "scale(0,0)" },
-			  ]
+				]
 			: { transform: "scale(1,1)", left: `${left}rem`, top: `${top}rem` },
 		from: { transform: "scale(1,1)", left: `${left}rem`, top: `${top}rem` },
-		delay: rnd,
+		delay,
 		reset: false,
 		config: { duration: 400 },
 	});
@@ -52,4 +53,4 @@ const Point = ({
 	);
 };
 
-export default Point;
+export default memo(Point);

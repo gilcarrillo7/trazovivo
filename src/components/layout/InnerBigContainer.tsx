@@ -7,7 +7,11 @@ interface IProps {
 
 const InnerBigContainer = (props: IProps) => {
 	const { className } = props;
-	return <div className={`w-full container xl:px-24 lg:px-16 ${className}`}>{props.children}</div>;
+	return (
+		<div className={`w-full container xl:px-24 lg:px-16 ${className}`}>
+			{props.children}
+		</div>
+	);
 };
 
 export default InnerBigContainer;

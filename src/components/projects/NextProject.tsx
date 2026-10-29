@@ -1,6 +1,5 @@
-import { Link } from "gatsby";
 import * as React from "react";
-import { Trans } from "react-i18next";
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 import TextContainer from "./TextContainer";
 
 const NextProject = ({

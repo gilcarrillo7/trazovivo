@@ -1,7 +1,12 @@
+export { default as AllProject } from "./AllProject";
 export { default as BigText } from "./BigText";
 export { default as FullImage } from "./FullImage";
 export { default as HeadTitle } from "./HeadTitle";
+export { default as ImageBand } from "./ImageBand";
+export { default as MultiCarousel } from "./MultiCarousel";
 export { default as NextProject } from "./NextProject";
+export { default as Paragraph } from "./Paragraph";
+export { default as PhoneCarousel } from "./PhoneCarousel";
 export { default as TextContainer } from "./TextContainer";
 export { default as TwoImagesSpace } from "./TwoImagesSpace";
-export { default as AllProject } from "./AllProject";
+export { default as TwoImagesSpaceAni } from "./TwoImagesSpaceAni";
