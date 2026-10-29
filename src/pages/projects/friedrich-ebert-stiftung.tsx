@@ -41,51 +41,51 @@ const pacto = () => {
 			<FullImage img={img1} alt="pacto" />
 			<HeadTitle title="Friedrich Ebert Stiftung">
 				<Paragraph>
-					<Trans>pacto.t1</Trans>
+					<Trans>fes.t1</Trans>
 				</Paragraph>
 				<Paragraph>
-					<Trans>pacto.t2</Trans>
+					<Trans>common.objetivos-de-la-colaboracion</Trans>
 					<ul className="list-disc pl-4">
 						<li>
-							<Trans>pacto.t3</Trans>
+							<Trans>fes.t3</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t4</Trans>
+							<Trans>fes.t4</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t5</Trans>
+							<Trans>fes.t5</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t6</Trans>
+							<Trans>common.lograr-mayor-reconocimiento-de-las</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t7</Trans>
+							<Trans>fes.t7</Trans>
 						</li>
 					</ul>
 				</Paragraph>
 				<Paragraph>
-					<Trans>pacto.t8</Trans>
+					<Trans>fes.t8</Trans>
 				</Paragraph>
 				<Paragraph>
-					<Trans>pacto.t9</Trans>
+					<Trans>common.tasks</Trans>
 					<ul className="list-disc pl-4">
 						<li>
-							<Trans>pacto.t10</Trans>
+							<Trans>common.plataforma-digital</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t11</Trans>
+							<Trans>common.identidad-grafica</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t12</Trans>
+							<Trans>common.materiales-audiovisuales</Trans>
 						</li>
 						<li>
-							<Trans>pacto.t13</Trans>
+							<Trans>common.campana-en-redes-sociales</Trans>
 						</li>
 					</ul>
 				</Paragraph>
 			</HeadTitle>
 			<FullImage img={img2} alt="pacto" />
-			<BigText text="pacto.t14" />
+			<BigText text="fes.t14" />
 			<div className="w-full mb-8">
 				<div className="player-wrapper">
 					<ReactPlayer
@@ -96,7 +96,7 @@ const pacto = () => {
 					></ReactPlayer>
 				</div>
 			</div>
-			<BigText text="pacto.t15" />
+			<BigText text="fes.t15" />
 			<TwoImagesSpace space="sm" alt="pacto" leftimg={img3} rightimg={img4} />
 			<TwoImagesSpace space="sm" alt="pacto" leftimg={img5} rightimg={img6} />
 			<TwoImagesSpace space="md" alt="pacto" leftimg={img7} rightimg={img8} />
@@ -114,7 +114,7 @@ export default pacto;
 
 export const query = graphql`
 	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "fes", "projects"] } }) {
 			edges {
 				node {
 					ns

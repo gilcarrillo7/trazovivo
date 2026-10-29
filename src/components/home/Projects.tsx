@@ -1,153 +1,8 @@
 import * as React from "react";
-import Project from "./Project";
-
-import Project5 from "../../images/projects/5.jpg";
-import Project6 from "../../images/projects/6.jpg";
-import Project7 from "../../images/projects/7.jpg";
-import Project8 from "../../images/projects/8.jpg";
-import Project9 from "../../images/projects/9.jpg";
-import Project10 from "../../images/projects/10.jpg";
-import Project11 from "../../images/projects/11.jpg";
-import Project12 from "../../images/projects/12.jpg";
-import Project13 from "../../images/projects/13.gif";
-import Project14 from "../../images/projects/14.jpg";
-import Project15 from "../../images/projects/15.jpg";
-import Project16 from "../../images/projects/16.jpg";
-import Project17 from "../../images/projects/17.jpg";
-import Project18 from "../../images/projects/18.gif";
-import Project19 from "../../images/projects/19.gif";
-import Project20 from "../../images/projects/20.gif";
-import Project21 from "../../images/projects/21.gif";
-import Project22 from "../../images/projects/22.gif";
-import Project23 from "../../images/projects/23.gif";
-import Project24 from "../../images/projects/24.gif";
-import Project25 from "../../images/projects/25.gif";
-import { Trans } from "gatsby-plugin-react-i18next";
 import { useState } from "react";
-
-const projects = [
-	{
-		title: "hivos.t0",
-		text: "hivos.t1",
-		img: Project25,
-		link: "hivos-futuros-urbanos",
-	},
-	{
-		title: "CARE Conecta",
-		text: "care.t0",
-		img: Project24,
-		link: "care-conecta",
-	},
-	{
-		title: "devlyn.t0",
-		text: "devlyn.t1",
-		img: Project23,
-		link: "fundacion-devlyn",
-	},
-	{
-		title: "Wingu",
-		text: "wingu.t0",
-		img: Project22,
-		link: "wingu",
-	},
-	{
-		title: "Oxfam",
-		text: "oxfam.t0",
-		img: Project21,
-		link: "oxfam",
-	},
-	{
-		title: "incl.t0",
-		text: "thi.t2",
-		img: Project20,
-		link: "iniciativa-x-la-inclusion",
-	},
-	{
-		title: "cfosc.t0",
-		text: "thi.t2",
-		img: Project18,
-		link: "cfosc",
-	},
-	{
-		title: "al.t0",
-		text: "Branding",
-		img: Project19,
-		link: "alianza-acercate",
-	},
-	{
-		title: "IRC - International Rescue Committee",
-		text: "Branding",
-		img: Project13,
-		link: "international-rescue-committee",
-	},
-	{
-		title: "Friedrich Ebert Stiftung",
-		text: "Estrategia de comunicación",
-		img: Project16,
-		link: "friedrich-ebert-stiftung",
-	},
-	{
-		title: "thi.t1",
-		text: "thi.t2",
-		img: Project17,
-		link: "thi",
-	},
-	{
-		title: "Incuba",
-		text: "Identidad gráfica y experiencia digital",
-		img: Project15,
-		link: "incuba",
-	},
-	{
-		title: "Ikaro",
-		text: "Nombre, Branding, Web",
-		img: Project14,
-		link: "ikaro",
-	},
-	{
-		title: "FZM - Feministisches Zentrum",
-		text: "Experiencia digital",
-		img: Project12,
-		link: "feministisches-zentrum-migrantinnen",
-	},
-	{
-		title: "Embajada de México en Alemania",
-		text: "Identidad gráfica",
-		img: Project11,
-		link: "salon_mexicano_de_ultramar",
-	},
-	{
-		title: "Embajada de México en Alemania",
-		text: "Identidad gráfica",
-		img: Project10,
-		link: "natur-poesie_instituto-cultural-mexico-alemania",
-	},
-	{
-		title: "icma.t1",
-		text: "Identidad gráfica",
-		img: Project9,
-		link: "instituto-cultural-mexico-alemania",
-	},
-	{ title: "AXA", text: "Transformación digital", img: Project8, link: "axa" },
-	{
-		title: "Kreuzberger Himmel",
-		text: "UX/UI para tienda en línea",
-		img: Project7,
-		link: "kreuzberger-himmel",
-	},
-	{
-		title: "Himmel 8",
-		text: "Diseño y desarrollo de UX/UI para página web",
-		img: Project6,
-		link: "himmel-8",
-	},
-	{
-		title: "Coconat",
-		text: "Brochure de comunicación de la compañía",
-		img: Project5,
-		link: "coconat",
-	},
-];
+import { Trans } from "gatsby-plugin-react-i18next";
+import { projects } from "../../data/projects";
+import Project from "./Project";
 
 const VISIBLE = 9;
 
@@ -159,11 +14,11 @@ const Projects = () => {
 			<div className="container grid sm:grid-cols-2 xl:grid-cols-3 sm:gap-x-12 xl:gap-x-24">
 				{shown.map((project) => (
 					<Project
-						key={project.link}
+						key={project.slug}
 						img={project.img}
 						title={project.title}
 						text={project.text}
-						link={project.link}
+						link={project.slug}
 					/>
 				))}
 			</div>

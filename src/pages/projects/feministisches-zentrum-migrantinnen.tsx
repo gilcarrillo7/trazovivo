@@ -86,7 +86,7 @@ export default fzm;
 
 export const query = graphql`
 	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "fzm", "projects"] } }) {
 			edges {
 				node {
 					ns

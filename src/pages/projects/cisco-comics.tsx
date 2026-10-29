@@ -39,10 +39,10 @@ const comics = () => {
 				<FullImage img={img1} alt="comics" />
 				<HeadTitle title="Cisco Comics UDC" className="text-white">
 					<Paragraph>
-						<Trans>comics.t1</Trans>
+						<Trans>ciscocomics.t1</Trans>
 					</Paragraph>
 					<Paragraph>
-						<Trans>comics.t2</Trans>
+						<Trans>ciscocomics.t2</Trans>
 					</Paragraph>
 				</HeadTitle>
 				<MultiCarousel imgs={[img2, img3, img4, img5, img6, img7]} />
@@ -51,7 +51,7 @@ const comics = () => {
 				<FullImage img={img15} alt="comics" />
 				<TextContainer className="text-white">
 					<Paragraph className="!mb-0">
-						<Trans>comics.t3</Trans>
+						<Trans>ciscocomics.t3</Trans>
 					</Paragraph>
 				</TextContainer>
 				<NextProject link="/projects/oracle" className="text-white" />
@@ -66,7 +66,7 @@ export default comics;
 
 export const query = graphql`
 	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "ciscocomics", "projects"] } }) {
 			edges {
 				node {
 					ns

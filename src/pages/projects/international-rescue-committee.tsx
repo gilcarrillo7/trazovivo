@@ -78,7 +78,7 @@ export default irc;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "irc", "projects"] } }) {
       edges {
         node {
           ns

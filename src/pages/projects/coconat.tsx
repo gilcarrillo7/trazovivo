@@ -27,7 +27,7 @@ const coconat = () => {
       <FullImage img={img1} alt="coconat" />
       <HeadTitle title="Coconat">
         <p>
-          <Trans>coco.t1</Trans>
+          <Trans>coconat.t1</Trans>
         </p>
       </HeadTitle>
       <FullImage img={img2} alt="coconat" />
@@ -36,10 +36,10 @@ const coconat = () => {
       <FullImage img={img5} alt="coconat" />
       <TextContainer>
         <Paragraph>
-          <Trans>coco.t2</Trans>
+          <Trans>coconat.t2</Trans>
         </Paragraph>
         <Paragraph className="!mb-0">
-          <Trans>coco.t3</Trans>
+          <Trans>coconat.t3</Trans>
         </Paragraph>
       </TextContainer>
       <NextProject link="/projects/hivos-futuros-urbanos" />
@@ -53,7 +53,7 @@ export default coconat;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "coconat", "projects"] } }) {
       edges {
         node {
           ns

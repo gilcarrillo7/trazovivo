@@ -68,7 +68,7 @@ const Wingu = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>wingu.t6</Trans>
+            <Trans>common.goals</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
@@ -84,7 +84,7 @@ const Wingu = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>wingu.t10</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
@@ -94,7 +94,7 @@ const Wingu = () => {
               <Trans>wingu.t12</Trans>
             </li>
             <li>
-              <Trans>wingu.t13</Trans>
+              <Trans>common.elaboracion-de-la-identidad-visual</Trans>
             </li>
             <li>
               <Trans>wingu.t14</Trans>
@@ -135,7 +135,7 @@ export default Wingu;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "projects", "wingu"] } }) {
       edges {
         node {
           ns

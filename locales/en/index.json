@@ -4,14 +4,6 @@
   "Siguiente Proyecto": "Next Project",
   "Siguiente": "Next",
   "Ver Todos": "View All",
-  "Nombre, Branding, Web": "Naming, Branding, Web",
-  "Experiencia digital": "Digital experience",
-  "Identidad gráfica": "Brand Identity",
-  "Identidad gráfica y experiencia digital": "Brand Identity and digital experience",
-  "Transformación digital": "Digital transformation",
-  "UX/UI para tienda en línea": "UX/UI for E-commerce.",
-  "Diseño y desarrollo de UX/UI para página web": "Design and development of UX/UI for website.",
-  "Brochure de comunicación de la compañía": "Communications Company Brochure.",
   "Identidad gráfica y materiales de comunicación": "Graphic identity and communication materials",
   "Comics como complemento de campaña creativa": "Comics as a complement to the creative campaign",
   "Concepto creativo, identidad gráfica y materiales de comunicación": "Creative concept, graphic identity and communication materials",
@@ -46,8 +38,6 @@
   "frases4.t4": "cannot be measured",
   "Inicio": "Home",
   "menu.t1": "We provide personal and close<br />attention to our customers.<br />We have a real relationship.",
-  "Embajada de México en Alemania": "Embassy of Mexico in Germany",
-  "Estrategia de comunicación": "Communications strategy",
   "quehacemos.t1": "We are a communications consultancy for ",
   "quehacemos.t2": "social transformation ",
   "quehacemos.t21": "with more than ",
@@ -60,5 +50,6 @@
   "quehacemos.t8": "intimate and active collaboration ",
   "quehacemos.t9": "between all the people involved in the project.",
   "quehacemos.t10": "We connect your social cause with the emotions of your audience.",
-  "Quienes somos": "About us"
+  "Quienes somos": "About us",
+  "Valores": "Values"
 }

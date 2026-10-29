@@ -74,14 +74,14 @@ const Alianza = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>al.t11</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
               <Trans>al.t12</Trans>
             </li>
             <li>
-              <Trans>al.t13</Trans>
+              <Trans>common.desarrollo-de-identidad-grafica</Trans>
             </li>
             <li>
               <Trans>al.t14</Trans>
@@ -113,7 +113,7 @@ export default Alianza;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "al", "projects"] } }) {
       edges {
         node {
           ns

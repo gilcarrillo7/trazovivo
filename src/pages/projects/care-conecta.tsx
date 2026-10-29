@@ -60,20 +60,20 @@ const CareConecta = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>care.t6</Trans>
+            <Trans>common.goals</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
               <Trans>care.t7</Trans>
             </li>
             <li>
-              <Trans>care.t8</Trans>
+              <Trans>common.mejorar-posicionamiento-social</Trans>
             </li>
             <li>
               <Trans>care.t9</Trans>
             </li>
             <li>
-              <Trans>care.t10</Trans>
+              <Trans>common.aumentar-alianzas-estrategicas</Trans>
             </li>
             <li>
               <Trans>care.t11</Trans>
@@ -82,7 +82,7 @@ const CareConecta = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>care.t12</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
@@ -159,7 +159,7 @@ export default CareConecta;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "care", "projects"] } }) {
       edges {
         node {
           ns

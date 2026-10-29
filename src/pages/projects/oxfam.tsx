@@ -54,7 +54,7 @@ const Oxfam = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>oxfam.t5</Trans>
+            <Trans>common.goals</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
@@ -70,11 +70,11 @@ const Oxfam = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>oxfam.t9</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
-              <Trans>oxfam.t10</Trans>
+              <Trans>common.elaboracion-de-la-identidad-visual</Trans>
             </li>
             <li>
               <Trans>oxfam.t11</Trans>
@@ -148,7 +148,7 @@ export default Oxfam;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "oxfam", "projects"] } }) {
       edges {
         node {
           ns

@@ -72,7 +72,7 @@ export default cisco;
 
 export const query = graphql`
 	query ($language: String!) {
-		locales: allLocale(filter: { language: { eq: $language } }) {
+		locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "cisco", "projects"] } }) {
 			edges {
 				node {
 					ns

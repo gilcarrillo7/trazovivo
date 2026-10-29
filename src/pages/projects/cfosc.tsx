@@ -67,36 +67,36 @@ const Cfosc = () => {
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>cfosc.t6</Trans>
+            <Trans>common.goals</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
               <Trans>cfosc.t7</Trans>
             </li>
             <li>
-              <Trans>cfosc.t8</Trans>
+              <Trans>common.aumentar-alianzas-estrategicas</Trans>
             </li>
             <li>
               <Trans>cfosc.t9</Trans>
             </li>
             <li>
-              <Trans>cfosc.t10</Trans>
+              <Trans>common.generar-conexiones-profundas-con-su</Trans>
             </li>
           </ul>
         </Paragraph>
         <Paragraph>
           <span className="font-bold">
-            <Trans>cfosc.t11</Trans>
+            <Trans>common.tasks</Trans>
           </span>
           <ul className="list-disc pl-4">
             <li>
-              <Trans>cfosc.t12</Trans>
+              <Trans>common.definicion-de-esencia-de-marca</Trans>
             </li>
             <li>
               <Trans>cfosc.t13</Trans>
             </li>
             <li>
-              <Trans>cfosc.t14</Trans>
+              <Trans>common.definicion-y-ejecucion-de-estrategia</Trans>
             </li>
             <li>
               <Trans>cfosc.t15</Trans>
@@ -164,7 +164,7 @@ export default Cfosc;
 
 export const query = graphql`
   query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+    locales: allLocale(filter: { language: { eq: $language }, ns: { in: ["index", "cfosc", "projects"] } }) {
       edges {
         node {
           ns
